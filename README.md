@@ -7,3 +7,5 @@
 [komentorivi.txt](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 Tätä piti vielä muokkaa, joten tässä muutokseni.
+
+*Ja* vielä uusi muutos
