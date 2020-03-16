@@ -1,5 +1,7 @@
-# Tässä on <h1> tag
+# Ohjelmistotekniikka, harjoitustyö <h1> Tehtävät
 
-**Tämä on tärkeä viesti**
+**Viikko 1**
 
-*Minä* onnistuin (ehkä) tässä tehtävässä! Wuhuu!
+[gitlog.txt](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+
+[komentorivi.txt](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
