@@ -1,0 +1,135 @@
+
+dhcp-84-210:ot_viikko1 miljaniemi$ git log --stat | cat
+commit fe1d6b0908c049c6721002c02bb7f69f8a16ec60
+Author: Milja Niemi <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 17:19:40 2020 +0200
+
+    nimen vaihto file2 -> file22
+
+ tiedostoja/{file2 => file22} | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b77b6bfa16fd39829cddede363f39c60800d731c
+Author: Milja Niemi <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 17:18:07 2020 +0200
+
+    poistetaan file1
+
+ tiedostoja/file1 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit cef8c752a8e96e95d6768468cdff00982e9c9a42
+Author: Milja Niemi <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 17:12:16 2020 +0200
+
+    uudet tiedostot
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 7db6dfc9c48bfb2dea841e693123fd06ec607a09
+Author: Milja Niemi <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 16:11:36 2020 +0200
+
+    muutoksia lisää
+
+ eka.txt    | 1 +
+ kolmas.txt | 2 ++
+ 2 files changed, 3 insertions(+)
+
+commit 7738cc277bce259070e05a1c11115a340c4f5e90
+Author: Milja Niemi <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 15:55:47 2020 +0200
+
+    uudelleennimeäminen
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9f25b34b681c7625bd36d068ccd88b838b5f6ee7
+Author: Milja Niemi <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 15:51:34 2020 +0200
+
+    poista tiedosto toinen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit bc21e42292744ac3f9c901a1924905a7156f95e3
+Author: Milja Niemi <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 14:52:35 2020 +0200
+
+    jälleen muokattu tiedosto.txt
+
+ tiedosto.txt | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+commit fbf0f17fd4df255f89126524b6979154f34ae1de
+Author: Milja Niemi <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 14:50:22 2020 +0200
+
+    tiedosto.txt muokattu vielä pitkällä tekstillä
+
+ tiedosto.txt | 42 ++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+commit b12f0e9cd90e6d311e6c4fb84dde1e966d38e18d
+Author: Milja <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 14:20:21 2020 +0200
+
+    jokintiedosto.txt luotu
+
+ stuff/jokintiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 600c99352028a01d001a91d580972fb720853449
+Author: Milja <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 14:16:36 2020 +0200
+
+    muutokset tiedostoihin toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit ec333feb31b970559f17e045aa2a94d453b538b7
+Author: Milja <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 14:14:01 2020 +0200
+
+    uusi tiedosto kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e30a463606d20e6ec5d3ce5ae874e02a00d5f1c4
+Author: Milja <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 11:20:29 2020 +0200
+
+    muutos
+
+ tiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit af832488540aac76558f0efef4b589dae26787a8
+Author: Milja <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 11:14:43 2020 +0200
+
+    toinen.txt luotu
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3d173577d7cf21c7968d7f380b6e40f8f7fb1d2d
+Author: Milja <milja.e.niemi@helsinki.fi>
+Date:   Wed Mar 11 11:08:39 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+
+14 directories, 5 files
+
