@@ -1,4 +1,4 @@
-<h1> Opintojen seurausjärjestelmä
+Opintojen seurausjärjestelmä <h1>
 
 **Sovelluksen tarkoitus**
 
