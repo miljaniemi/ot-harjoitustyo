@@ -15,4 +15,4 @@ Tätä piti vielä muokkaa, joten tässä muutokseni.
 
 [Ajankäyttö](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/TyöaikaKirjanpito.md)
 
-[Määrittelydokumentti]()
+[Määrittelydokumentti](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko2/Määrittelydokumentti.md)
