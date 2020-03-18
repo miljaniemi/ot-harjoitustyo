@@ -9,3 +9,9 @@
 Tätä piti vielä muokkaa, joten tässä muutokseni.
 
 *Ja* vielä uusi muutos
+
+**Viikko 2**
+
+[Ajankäyttö](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/TyöaikaKirjanpito.md)
+
+[Määrittelydokumentti]()
