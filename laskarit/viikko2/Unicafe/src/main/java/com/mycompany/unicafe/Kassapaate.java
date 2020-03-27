@@ -3,37 +3,37 @@ package com.mycompany.unicafe;
 
 public class Kassapaate {
 
-    private int kassassaRahaa;
+    private double kassassaRahaa;
     private int edulliset;
     private int maukkaat;
 
     public Kassapaate() {
-        this.kassassaRahaa = 100000;
+        this.kassassaRahaa = 1000;
     }
 
-    public int syoEdullisesti(int maksu) {
-        if (maksu >= 240) {
-            this.kassassaRahaa = kassassaRahaa + 240;
+    public double syoEdullisesti(double maksu) {
+        if (maksu >= 2.40) {
+            this.kassassaRahaa = kassassaRahaa + 2.40;
             ++this.edulliset;
-            return maksu - 240;
+            return maksu - 2.40;
         } else {
             return maksu;
         }
     }
 
-    public int syoMaukkaasti(int maksu) {
-        if (maksu >= 400) {
-            this.kassassaRahaa = kassassaRahaa + 400;
+    public double syoMaukkaasti(double maksu) {
+        if (maksu >= 4.00) {
+            this.kassassaRahaa = kassassaRahaa + 4.00;
             this.maukkaat++;
-            return maksu - 400;
+            return maksu - 4.00;
         } else {
             return maksu;
         }
     }
 
     public boolean syoEdullisesti(Maksukortti kortti) {
-        if (kortti.saldo() >= 240) {
-            kortti.otaRahaa(240);
+        if (kortti.saldo() >= 2.40) {
+            kortti.otaRahaa(2.40);
             this.edulliset++;
             return true;
         } else {
@@ -42,8 +42,8 @@ public class Kassapaate {
     }
 
     public boolean syoMaukkaasti(Maksukortti kortti) {
-        if (kortti.saldo() >= 400) {
-            kortti.otaRahaa(400);
+        if (kortti.saldo() >= 4.00) {
+            kortti.otaRahaa(4.00);
             this.maukkaat++;
             return true;
         } else {
@@ -60,7 +60,7 @@ public class Kassapaate {
         }
     }
 
-    public int kassassaRahaa() {
+    public double kassassaRahaa() {
         return kassassaRahaa;
     }
 
