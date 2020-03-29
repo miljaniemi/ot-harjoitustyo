@@ -1,4 +1,4 @@
-# Ohjelmistotekniikka, harjoitustyö <h1> Tehtävät
+# Ohjelmistotekniikka, harjoitustyö <h1>
 
 
 **Tärkeitä linkkejä** 
