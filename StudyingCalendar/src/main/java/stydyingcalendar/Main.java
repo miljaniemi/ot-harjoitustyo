@@ -1,7 +1,7 @@
 
-package OhTeProject;
+package stydyingcalendar;
 
-public class OhteProjekti {
+public class Main {
 
     public static void main(String[] args) {
         Course ohte = new Course("Ohjelmistotekniikka",4,5,false);

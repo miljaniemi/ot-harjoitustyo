@@ -1,4 +1,5 @@
-package OhTeProject;
+
+package stydyingcalendar;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -105,4 +106,5 @@ public class Calendar {
         }
         System.out.println("");
     }
+
 }

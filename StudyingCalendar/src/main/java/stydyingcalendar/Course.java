@@ -1,5 +1,5 @@
 
-package OhTeProject;
+package stydyingcalendar;
 
 public class Course {
     
