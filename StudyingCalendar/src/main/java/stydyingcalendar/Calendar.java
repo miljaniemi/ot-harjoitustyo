@@ -19,7 +19,6 @@ public class Calendar {
 
     public void addCourse(Course course) {
         int period = course.getPeriod();
-        String name = course.getName();
 
         if (period == 1) {
             firstPeriod.add(course);
@@ -27,8 +26,22 @@ public class Calendar {
             secondPeriod.add(course);
         } else if (period == 3) {
             thirdPeriod.add(course);
-        } else {
+        } else if (period == 4){
             fourthPeriod.add(course);
+        }
+    }
+    
+    public void deleteCourse(Course course) {
+        int period = course.getPeriod();
+        
+        if (period == 1) {
+            firstPeriod.remove(course);
+        } else if (period == 2) {
+            secondPeriod.remove(course);
+        } else if (period == 3) {
+            thirdPeriod.remove(course);
+        } else if (period == 4){
+            fourthPeriod.remove(course);
         }
     }
 
@@ -45,7 +58,7 @@ public class Calendar {
             for (Course course : thirdPeriod) {
                 System.out.println(course.getName() + ", " + course.getCredit() + " credits");
             }
-        } else {
+        } else if (period == 4) {
             for (Course course : fourthPeriod) {
                 System.out.println(course.getName() + ", " + course.getCredit() + " credits");
             }

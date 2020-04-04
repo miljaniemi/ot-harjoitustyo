@@ -13,6 +13,9 @@ public class Main {
         calendar.showAll();
         calendar.showAutumn();
         calendar.showSpring();
+        System.out.println("Poistetaan Ohjelmistotekniikka");
+        calendar.deleteCourse(ohte);
+        calendar.showSpring();
     }
     
 }
