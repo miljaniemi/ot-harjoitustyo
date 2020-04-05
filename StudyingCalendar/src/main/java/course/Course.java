@@ -1,5 +1,5 @@
 
-package stydyingcalendar;
+package course;
 
 public class Course {
     

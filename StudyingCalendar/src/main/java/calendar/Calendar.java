@@ -1,9 +1,10 @@
 
-package stydyingcalendar;
+package calendar;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import course.Course;
 
 public class Calendar {
 
@@ -45,25 +46,25 @@ public class Calendar {
         }
     }
 
-    public void showPeriod(int period) {
+    public String showPeriod(int period) {
         if (period == 1) {
             for (Course course : firstPeriod) {
-                System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+                return course.getName() + ", " + course.getCredit() + " credits";
             }
         } else if (period == 2) {
             for (Course course : secondPeriod) {
-                System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+                return course.getName() + ", " + course.getCredit() + " credits";
             }
         } else if (period == 3) {
             for (Course course : thirdPeriod) {
-                System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+                return course.getName() + ", " + course.getCredit() + " credits";
             }
         } else if (period == 4) {
             for (Course course : fourthPeriod) {
-                System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+                return course.getName() + ", " + course.getCredit() + " credits";
             }
         }
-        System.out.println("");
+        return "";
     }
 
     public void showAll() {

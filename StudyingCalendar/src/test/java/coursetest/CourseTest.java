@@ -1,8 +1,10 @@
+package coursetest;
+
 
 
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
-import stydyingcalendar.Course;
+import course.Course;
 
 
 public class CourseTest {
