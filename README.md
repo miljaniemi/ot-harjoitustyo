@@ -2,7 +2,7 @@
 <h2> Opintokalenteri
 
 
-<h2> Dokumentaatio
+<h2> Dokumentaatio <h2>
 
 [Ajankäyttö](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko2/TyöaikaKirjanpito.md)
 
@@ -10,11 +10,11 @@
 
 
 
-<h2> Projekti
+<h2> Projekti <h2>
 
 [Koko projekti](https://github.com/miljaniemi/ot-harjoitustyo/tree/master/StudyingCalendar)
 
-<h2> Komentorivitoiminnot
+<h2> Komentorivitoiminnot <h2>
   
 **Testaus**
 
