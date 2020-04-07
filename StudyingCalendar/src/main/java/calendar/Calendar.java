@@ -4,7 +4,7 @@ package calendar;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import course.Course;
+import course.domain.Course;
 
 public class Calendar {
 

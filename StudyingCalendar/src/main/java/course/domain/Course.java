@@ -1,5 +1,5 @@
 
-package course;
+package course.domain;
 
 public class Course {
     

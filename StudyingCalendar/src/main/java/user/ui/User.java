@@ -1,7 +1,7 @@
-package user;
+package user.ui;
 
 import calendar.Calendar;
-import course.Course;
+import course.domain.Course;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -43,16 +43,17 @@ public class User {
                 break;
             } else if (command.equals("1")) {
                 System.out.println("You're a host!");
+                printHostInstructors();
+                break;
             } else if (command.equals("2")) {
                 System.out.println("You're a student!");
+                break;
             }
         }
     }
 
     private void printHostInstructors() {
-        System.out.println("1 add a course");
-        System.out.println("2 delete a course");
-        System.out.println("x stop");
+        System.out.println("1 add a course \n2 delete a course \nx stop");
     }
 
     private void addCourse() {

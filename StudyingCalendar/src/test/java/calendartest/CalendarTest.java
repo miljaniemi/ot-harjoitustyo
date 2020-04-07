@@ -5,7 +5,7 @@ package calendartest;
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
 import calendar.Calendar;
-import course.Course;
+import course.domain.Course;
 
 
 public class CalendarTest {
@@ -22,12 +22,14 @@ public class CalendarTest {
     }
     
     @Test
-    public void twoCoursesReturnedWhenTwoAddded() {
-        Course ohpe = new Course("Ohjelmoinnin perusteet",1,5,false);
+    public void courseIsNotFoundWhenIncorrectPeriod() {
+        Course ohpe = new Course("Ohjelmoinnin perusteet",6,5,false);
         Calendar calendar = new Calendar();
         calendar.addCourse(ohpe);
-        Course lama = new Course("Laskennan mallit",1,5,false);
-        calendar.addCourse(lama);
-        assertEquals(calendar.showPeriod(1),"Ohjelmoinnin perusteet, 5 credits");
+        assertEquals(calendar.showPeriod(6),"");
+        assertEquals(calendar.showPeriod(1),"");
+        assertEquals(calendar.showPeriod(2),"");
+        assertEquals(calendar.showPeriod(3),"");
+        assertEquals(calendar.showPeriod(4),"");
     }
 }

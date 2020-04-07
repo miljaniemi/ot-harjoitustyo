@@ -1,10 +1,10 @@
 
 package main;
 
-import course.Course;
+import course.domain.Course;
 import calendar.Calendar;
 import java.util.Scanner;
-import user.User;
+import user.ui.User;
 
 public class Main {
 
