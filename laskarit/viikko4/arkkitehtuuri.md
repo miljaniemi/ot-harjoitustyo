@@ -1,0 +1,1 @@
+![Kaavio](link-to-image)
