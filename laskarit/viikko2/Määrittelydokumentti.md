@@ -17,11 +17,11 @@
 
 **Toiminnallisuudet**
 
-- Opiskelija näkee omat käymättä olevat kurssit
-- Näkee missä periodissa menee mitäkin
+- Opiskelija näkee omat käymättä olevat kurssit (tehty (melkein. vielä ei tallennu muistiin)
+- Näkee missä periodissa menee mitäkin ((tehty (melkein. vielä ei tallennu muistiin))
 - Kurssi katoaa kun se käyty (Ylläpitäjä merkkaa)
-- Vain ylläpitäjä saa lisätä ja poistaa kursseja, sekä määritellä niiden sijoit$
-- Sisäänkirjautuessa valitaan joko ylläpito vai opiskelija (Itse toimin kumpana$
+- Vain ylläpitäjä saa lisätä ja poistaa kursseja, sekä määritellä niiden sijoittamisesta
+- Sisäänkirjautuessa valitaan joko ylläpito vai opiskelija (Itse toimin kumpanakin) (tehty! ei salasanaa, mutta niin ei pitänytkään)
 
 **Mahdollisia jatkotoiminnallisuuksia**
 
