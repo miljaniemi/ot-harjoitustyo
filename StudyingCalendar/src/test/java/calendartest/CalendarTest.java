@@ -4,8 +4,8 @@ package calendartest;
 
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
-import calendar.Calendar;
-import course.domain.Course;
+import studyingcalendar.domain.Calendar;
+import studyingcalendar.domain.Course;
 
 
 public class CalendarTest {

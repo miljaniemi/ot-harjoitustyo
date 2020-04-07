@@ -4,7 +4,7 @@ package coursetest;
 
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
-import course.domain.Course;
+import studyingcalendar.domain.Course;
 
 
 public class CourseTest {

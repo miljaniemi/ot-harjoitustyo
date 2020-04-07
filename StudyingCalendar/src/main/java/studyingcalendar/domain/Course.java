@@ -1,5 +1,5 @@
 
-package course.domain;
+package studyingcalendar.domain;
 
 public class Course {
     

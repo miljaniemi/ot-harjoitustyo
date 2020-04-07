@@ -1,10 +1,10 @@
 
-package main;
+package studyingcalendar.ui;
 
-import course.domain.Course;
-import calendar.Calendar;
+import studyingcalendar.domain.Course;
+import studyingcalendar.domain.Calendar;
 import java.util.Scanner;
-import user.ui.User;
+import studyingcalendar.ui.User;
 
 public class Main {
 

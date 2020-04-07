@@ -1,7 +1,7 @@
-package user.ui;
+package studyingcalendar.ui;
 
-import calendar.Calendar;
-import course.domain.Course;
+import studyingcalendar.domain.Calendar;
+import studyingcalendar.domain.Course;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -30,8 +30,7 @@ public class User {
     }
 
     public void start() {
-        System.out.println("Welcome! Are you a student or a host?");
-        System.out.println("1 host or 2 student");
+        System.out.println("Welcome! Are you a student or a host?\n1 host or 2 student");
         while (true) {
             String command = reader.nextLine();
             if (!studentOrHost.keySet().contains(command)) {

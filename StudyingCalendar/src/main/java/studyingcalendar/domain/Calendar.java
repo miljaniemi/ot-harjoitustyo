@@ -1,10 +1,10 @@
 
-package calendar;
+package studyingcalendar.domain;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import course.domain.Course;
+import studyingcalendar.domain.Course;
 
 public class Calendar {
 
@@ -27,7 +27,7 @@ public class Calendar {
             secondPeriod.add(course);
         } else if (period == 3) {
             thirdPeriod.add(course);
-        } else if (period == 4){
+        } else if (period == 4) {
             fourthPeriod.add(course);
         }
     }
@@ -41,7 +41,7 @@ public class Calendar {
             secondPeriod.remove(course);
         } else if (period == 3) {
             thirdPeriod.remove(course);
-        } else if (period == 4){
+        } else if (period == 4) {
             fourthPeriod.remove(course);
         }
     }
@@ -72,18 +72,15 @@ public class Calendar {
         for (Course course : firstPeriod) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
-        System.out.println("");
-        System.out.println("Second period:");
+        System.out.println("\nSecond period:");
         for (Course course : secondPeriod) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
-        System.out.println("");
-        System.out.println("Third period:");
+        System.out.println("\nThird period:");
         for (Course course : thirdPeriod) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
-        System.out.println("");
-        System.out.println("Fourth period:");
+        System.out.println("\nFourth period:");
         for (Course course : fourthPeriod) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
@@ -107,14 +104,11 @@ public class Calendar {
     }
     
     public void showSpring() {
-        System.out.println("ﾟ✧ Spring periods ✧ﾟ");
-        System.out.println("");
-        System.out.println("Third period:");
+        System.out.println("ﾟ✧ Spring periods ✧ﾟ\n\nThird period:");
         for (Course course : thirdPeriod) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
-        System.out.println("");
-        System.out.println("Fourth period:");
+        System.out.println("\nFourth period:");
         for (Course course : fourthPeriod) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
