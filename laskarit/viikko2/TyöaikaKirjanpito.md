@@ -7,5 +7,7 @@ Päivä | Aika tunteina | Mitä tehty
 31.3. | 2 | Etäkoneen toimimaan saaminen ja testaus
 4.4. | 1 | Siistimistä ja hieman koodailua. Jacoco raportti toimintaan
 5.4. | 3 | Koodailua
-Yhteensä | 8 | 
+6.4. | 1 | Lisää koodailua
+7.4. | 3 | Loput tehtävät suunnilleen tehty
+Yhteensä | 15 | 
 
