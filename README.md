@@ -1,4 +1,4 @@
-# Ohjelmistotekniikka, harjoitustyö 
+# Ohjelmistotekniikka, harjoitustyö #
 <h2> Opintokalenteri
 
 
@@ -7,6 +7,8 @@
 [Ajankäyttö](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko2/TyöaikaKirjanpito.md)
 
 [Määrittelydokumentti](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko2/Määrittelydokumentti.md)
+
+
 
 <h2> Projekti
 
