@@ -8,7 +8,7 @@
 
 [Määrittelydokumentti](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko2/Määrittelydokumentti.md)
 
-
+[Arkkitehtuuri](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko4/arkkitehtuuri.md)
 
 ## Projekti
 
