@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class User {
+public class TextInterface {
 
     private Scanner reader;
     private Map<String, String> studentOrHost;
@@ -15,7 +15,7 @@ public class User {
     private Course course;
     private Calendar calendar;
 
-    public User(Scanner reader) {
+    public TextInterface(Scanner reader) {
         this.reader = reader;
         studentOrHost = new TreeMap<>();
         hostCommands = new TreeMap<>();
