@@ -32,7 +32,7 @@ public class FileCourseDao implements CourseDao {
         }
     }
     
-    private void save() throws Exception{
+    private void save() throws Exception {
         try (FileWriter writer = new FileWriter(new File(file))) {
             for (Course course : courses) {
                 writer.write(course.getName() + ";" + course.getPeriod() + ";" + course.getCredit() + ";" + course.getDone() + "\n");
