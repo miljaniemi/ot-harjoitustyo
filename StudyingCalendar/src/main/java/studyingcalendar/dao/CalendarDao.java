@@ -1,14 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package studyingcalendar.dao;
 
-/**
- *
- * @author miljaniemi
- */
-public class CalendarDao {
+import java.util.List;
+import studyingcalendar.domain.Calendar;
+
+public interface CalendarDao {
+
+    public Calendar create(Calendar arg0) throws Exception;
+
+    public List<Calendar> getAll();
+
+    public void setDone(int arg0) throws Exception;
     
 }
