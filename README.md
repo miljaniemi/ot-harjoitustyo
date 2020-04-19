@@ -4,11 +4,11 @@
 
 ## Dokumentaatio 
 
-[Ajankäyttö](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko2/TyöaikaKirjanpito.md)
+[Ajankäyttö](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/TyöAikakirjanpito.md)
 
-[Määrittelydokumentti](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko2/Määrittelydokumentti.md)
+[Määrittelydokumentti](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Vaativuusmaarittely.md)
 
-[Arkkitehtuuri](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/laskarit/viikko4/arkkitehtuuri.md)
+[Arkkitehtuuri](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Arkkitehtuuri.md)
 
 ## Projekti
 
