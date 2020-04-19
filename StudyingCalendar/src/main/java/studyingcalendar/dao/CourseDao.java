@@ -6,10 +6,7 @@ import studyingcalendar.domain.Course;
 
 public interface CourseDao {
     
-    public Course create(Course arg0) throws Exception;
+    Course create(Course course) throws Exception;
+    List<Course> getAll();
 
-    public List<Course> getAll();
-
-    public void setDone(int arg0) throws Exception;
-    
 }

@@ -31,6 +31,7 @@
                 <configuration>
                     <excludes>
                         <exclude>studyingcalendar/ui/*</exclude>
+                        <exclude>studyingcalendar/main/*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
