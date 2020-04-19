@@ -17,6 +17,7 @@ public class TextInterface {
 
     public TextInterface(Scanner reader) {
         this.reader = reader;
+        calendar = new Calendar();
         studentOrHost = new TreeMap<>();
         hostCommands = new TreeMap<>();
 
@@ -41,8 +42,7 @@ public class TextInterface {
             if (command.equals("x")) {
                 break;
             } else if (command.equals("1")) {
-                System.out.println("You're a host!");
-                printHostInstructors();
+                youreHost();
                 break;
             } else if (command.equals("2")) {
                 System.out.println("You're a student!");
@@ -55,6 +55,23 @@ public class TextInterface {
         System.out.println("1 add a course \n2 delete a course \nx stop");
     }
 
+    private void youreHost() {
+        System.out.println("You're a host!");
+        printHostInstructors();
+        while (true) {
+            String command = reader.nextLine();
+                if (!hostCommands.keySet().contains(command)) {
+                    System.out.println("Invalid command");
+                    printHostInstructors();
+                } else if (command.equals("x")) {
+                    break;
+                } else if (command.equals("1")) {
+                    addCourse();
+                } else if (command.equals("2")) {
+                    System.out.println("Sorry, this function are not available yet");
+                }
+        }
+    }
     private void addCourse() {
         System.out.print("Name of the course: ");
         String name = reader.nextLine();
@@ -64,4 +81,5 @@ public class TextInterface {
         int credit = reader.nextInt();
         calendar.addCourse(new Course(name, period, credit, false));
     }
+
 }
