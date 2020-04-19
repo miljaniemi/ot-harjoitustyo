@@ -44,6 +44,7 @@ public class TextInterface {
             } else if (command.equals("1")) {
                 youreHost();
                 break;
+
             } else if (command.equals("2")) {
                 System.out.println("You're a student!");
                 break;
@@ -60,18 +61,19 @@ public class TextInterface {
         printHostInstructors();
         while (true) {
             String command = reader.nextLine();
-                if (!hostCommands.keySet().contains(command)) {
-                    System.out.println("Invalid command");
-                    printHostInstructors();
-                } else if (command.equals("x")) {
-                    break;
-                } else if (command.equals("1")) {
-                    addCourse();
-                } else if (command.equals("2")) {
-                    System.out.println("Sorry, this function are not available yet");
-                }
+            if (!hostCommands.keySet().contains(command)) {
+                System.out.println("Invalid command");
+                printHostInstructors();
+            } else if (command.equals("x")) {
+                break;
+            } else if (command.equals("1")) {
+                addCourse();
+            } else if (command.equals("2")) {
+                System.out.println("Sorry, this function are not available yet");
+            }
         }
     }
+
     private void addCourse() {
         System.out.print("Name of the course: ");
         String name = reader.nextLine();
