@@ -10,5 +10,6 @@ Päivä | Aika tunteina | Mitä tehty
 6.4. | 1 | Lisää koodailua
 7.4. | 3 | Loput tehtävät suunnilleen tehty
 14.4. | 1 | koodin eteenpäin tekemistä
-19.4. | 1 | koodailua ja tehtävien tekoa
-Yhteensä | 17 | 
+19.4. | 4 | koodailua ja tehtävien tekoa
+21.4. | 1 | Viimeisten tehtävien tekoa
+Yhteensä | 20 | (ei laskettu 21.4!!)
