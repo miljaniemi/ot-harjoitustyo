@@ -1,5 +1,5 @@
 # Ohjelmistotekniikka, harjoitustyö #
-<h2> Opintokalenteri
+<h2> Opintokalenteri <h2>
 
 Opintokalenteri on ohjelma, joka on suunniteltu lähinnä omaan käyttöön. Siellä voi olla joko oppilaana tai ylläpitäjänä. Oppilaana voit nähdä käytävät kurssit ja milloin ne voi käydä. Periodi näkymiä voi nähdä joko periodi , lukukausi tai koko vuosi kerrallaan. Ylläpitäjä voi lisätä ja poistaa kursseja.
 
