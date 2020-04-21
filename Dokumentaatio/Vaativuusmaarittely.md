@@ -13,14 +13,14 @@
 - *Opiskelija(t?)*
         - Näkee omat jäljellä olevat kurssit
         - Kalenteri näkymässä periodien kohdilla vain käymättä olevat kurssit
-        - En tiedä onko liian haastavaa, jos olisi monta käyttäjää. Alustavasti$
+        - En tiedä onko liian haastavaa, jos olisi monta käyttäjää. Alustavasti vain yksi, minä itse.
 
 **Toiminnallisuudet**
 
-- Opiskelija näkee omat käymättä olevat kurssit (tehty (melkein. vielä ei tallennu muistiin)
-- Näkee missä periodissa menee mitäkin ((tehty (melkein. vielä ei tallennu muistiin))
+- Opiskelija näkee omat käymättä olevat kurssit (tehty (melkein. Osittain tallentuu jo muistiin, ehkä, melkein. Ei vielä voi hoitaa tekstiliittymän kautta)
+- Näkee missä periodissa menee mitäkin ((tehty (melkein. Vielä ei tallennu muistiin. Sama tässä kuin yllä))
 - Kurssi katoaa kun se käyty (Ylläpitäjä merkkaa)
-- Vain ylläpitäjä saa lisätä ja poistaa kursseja, sekä määritellä niiden sijoittamisesta
+- Vain ylläpitäjä saa lisätä ja poistaa kursseja, sekä määritellä niiden sijoittamisesta (lisäys tehty! Poisto vielä uupuu)
 - Sisäänkirjautuessa valitaan joko ylläpito vai opiskelija (Itse toimin kumpanakin) (tehty! ei salasanaa, mutta niin ei pitänytkään)
 
 **Mahdollisia jatkotoiminnallisuuksia**
