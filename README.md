@@ -10,9 +10,9 @@
 
 [Arkkitehtuuri](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Arkkitehtuuri.md)
 
-## Projekti
+## Releaset
 
-[Koko projekti](https://github.com/miljaniemi/ot-harjoitustyo/tree/master/StudyingCalendar)
+[Viikko 5](https://github.com/miljaniemi/ot-harjoitustyo/releases)
 
 ## Komentorivitoiminnot
   
