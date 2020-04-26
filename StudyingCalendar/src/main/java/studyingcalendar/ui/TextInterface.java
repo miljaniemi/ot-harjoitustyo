@@ -1,3 +1,7 @@
+/**
+ * Luokka, joka sisältää tektikäyttöliittymän
+ */
+        
 package studyingcalendar.ui;
 
 import java.io.FileInputStream;
@@ -21,6 +25,13 @@ public class TextInterface {
     private Calendar calendar;
     private FileCourseDao dao;
 
+    /**
+     * Metodi, jossa määritellään tarvittavat parametrit, sekä komennot
+     * @param reader lukija, joilla saadaan komennot
+     * @throws FileNotFoundException
+     * @throws IOException
+     * @throws Exception 
+     */
     public TextInterface(Scanner reader) throws FileNotFoundException, IOException, Exception {
         this.reader = reader;
         calendar = new Calendar();
@@ -44,6 +55,10 @@ public class TextInterface {
         studentCommands.put("x", "stop");
     }
 
+    /**
+     * Metodi, jota kutsutaan mainista ja tässä metodissa päätetään, onko käyttäjä ylläpitäjä vai oppilas
+     * @throws Exception 
+     */
     public void start() throws Exception {
         calendarUpToDate();
         System.out.println("Welcome! Are you a student or a host?\n1 host or 2 student");
@@ -66,14 +81,24 @@ public class TextInterface {
         }
     }
 
+    /**
+     * Metodi tulostaa ylläpitäjän komentojen ohjeet
+     */
     private void printHostInstructors() {
         System.out.println("1 add a course \n2 delete a course \nx stop");
     }
 
+    /**
+     * Metodi tulostaa oppilaan komentojen ohjeet
+     */
     private void printStudentInstructors() {
         System.out.println("1 show specific period \n2 show autumn \n3 show spring \n4 show all \nx stop");
     }
 
+    /**
+     * Metodi päivittää kalenterin tallennetut kurssit
+     * @throws Exception 
+     */
     private void calendarUpToDate() throws Exception {
         if (dao.courses.isEmpty() == false) {
             for (Course course : dao.courses) {
@@ -82,6 +107,10 @@ public class TextInterface {
         }
     }
 
+    /**
+     * Metodi, jota käytetään kun on oppilaana, voi valita haluaako tutkia yhtä periodia, syksyn tai kevään periodeja sekä kaikkia periodeja
+     * @throws Exception 
+     */
     private void youreStudent() throws Exception {
         System.out.println("You're a student!");
         printStudentInstructors();
@@ -93,7 +122,7 @@ public class TextInterface {
             } else if (command.equals("x")) {
                 break;
             } else if (command.equals("1")) {
-                showPeriod();
+                showPeriod(reader);
                 printStudentInstructors();
             } else if (command.equals("2")) {
                 calendar.showAutumn();
@@ -108,6 +137,10 @@ public class TextInterface {
         }
     }
 
+    /**
+     * Metodi, kun on ylläpitäjä, voi lisätä tai poistaa kursseja
+     * @throws Exception 
+     */
     private void youreHost() throws Exception {
         System.out.println("You're a host!");
         printHostInstructors();
@@ -119,22 +152,27 @@ public class TextInterface {
             } else if (command.equals("x")) {
                 break;
             } else if (command.equals("1")) {
-                addCourse();
+                addCourse(reader);
                 printHostInstructors();
             } else if (command.equals("2")) {
-                deleteCourse();
+                deleteCourse(reader);
                 printHostInstructors();
             }
         }
     }
 
-    private void addCourse() throws Exception {
+    /**
+     * Ylläpitäjän metodi, voi lisätä kurssin syötteen avulla
+     * @param r lukija
+     * @throws Exception 
+     */
+    private void addCourse(Scanner r) throws Exception {
         System.out.print("Name of the course: ");
-        String name = reader.nextLine();
+        String name = r.nextLine();
         System.out.print("In which period? (give as a number): ");
-        int period = reader.nextInt();
+        int period = r.nextInt();
         System.out.print("How many credits?: ");
-        int credit = reader.nextInt();
+        int credit = r.nextInt();
         Course course = new Course(name, period, credit, false);
         if (dao.courses.contains(course)) {
             System.out.println("This course already exist!");
@@ -144,11 +182,16 @@ public class TextInterface {
         }
     }
 
-    private void deleteCourse() throws Exception {
+    /**
+     * Ylläpitäjän metodi kurssin poistamista varten
+     * @param r lukija
+     * @throws Exception 
+     */
+    private void deleteCourse(Scanner r) throws Exception {
         System.out.print("Name of the course you want to delete: ");
-        String name = reader.nextLine();
+        String name = r.nextLine();
         System.out.print("In which period? (give as a number): ");
-        int per = reader.nextInt();
+        int per = r.nextInt();
         for (Course c : dao.courses) {
             if (c.getName().equals(name) && c.getPeriod() == per) {
                 c.setDone(true);
@@ -157,10 +200,15 @@ public class TextInterface {
             }
         }
     }
+    /**
+     * Oppilaan metodi, jossa voi valita mitä periodia haluaa tarkastella
+     * @param r lukija
+     * @throws Exception 
+     */
  
-    private void showPeriod() throws Exception {
+    private void showPeriod(Scanner r) throws Exception {
         System.out.print("Which period do you wish to see? (give as a number): ");
-        int p = reader.nextInt();
+        int p = r.nextInt();
         calendar.showPeriod(p);
     }
 }

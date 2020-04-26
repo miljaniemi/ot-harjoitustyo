@@ -1,3 +1,7 @@
+/**
+ * Luokka joka tallentaa talteen kussit
+ */
+
 package studyingcalendar.dao;
 
 import java.io.File;
@@ -12,6 +16,11 @@ public class FileCourseDao implements CourseDao {
     public List<Course> courses;
     private String file;
 
+    /**
+     * Metodi joka lukee tiedostoa ja sen kautta tuo kurssit tallesta
+     * @param file tiedosto ,jossa on nämä kurssit
+     * @throws Exception 
+     */
     public FileCourseDao(String file) throws Exception {
         courses = new ArrayList<>();
         this.file = file;
@@ -31,6 +40,10 @@ public class FileCourseDao implements CourseDao {
         }
     }
     
+    /**
+     * Metodi, joka tallentaa uudet kurssit talteen
+     * @throws Exception 
+     */
     private void save() throws Exception {
         try (FileWriter writer = new FileWriter(new File(file))) {
             for (Course course : courses) {
@@ -39,6 +52,12 @@ public class FileCourseDao implements CourseDao {
         }
     }
 
+    /**
+     * Metodi joka nimensä mukaan tekee kurssit, tätä kutsutaan kun tehdään uusi kurssi. 
+     * @param course Kurssi, jonka käyttäjä on luonut testikäyttöliittymässä
+     * @return kurssin
+     * @throws Exception 
+     */
     @Override
     public Course create(Course course) throws Exception {
         courses.add(course);
@@ -46,6 +65,12 @@ public class FileCourseDao implements CourseDao {
         return course;
     }
 
+        /**
+     * Metodi joka nimensä mukaan poistaa kurssit, tätä kutsutaan kun poistetaan kurssi. 
+     * @param course Kurssi, joka halutaan poistaa
+     * @return kurssin
+     * @throws Exception 
+     */
     @Override
     public Course delete(Course course) throws Exception {
         courses.remove(course);
@@ -53,4 +78,5 @@ public class FileCourseDao implements CourseDao {
         return course;
     }
 
+    
 }

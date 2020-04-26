@@ -1,3 +1,7 @@
+/**
+ * Luokka, jossa kursseja kalenteria arten
+ */
+
 package studyingcalendar.domain;
 
 public class Course {
@@ -7,6 +11,13 @@ public class Course {
     private int credit;
     private boolean done;
     
+    /**
+     * Kurssin parametrit omaava metodi
+     * @param name kurssin nimi
+     * @param period periodi missä kurssi käydään
+     * @param credit kuinka monta opintopistettä kyseisestä kurssista saa
+     * @param done onko käyty vai ei
+     */
     public Course(String name, int period, int credit, boolean done) {
         this.name = name;
         this.period = period;

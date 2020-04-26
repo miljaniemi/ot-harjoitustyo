@@ -1,4 +1,7 @@
-
+/**
+ * Luokka nimensä mukaan toimii kalenterina,
+ * jossa näkee missä periodeissa eri kurssit ovat
+ */
 package studyingcalendar.domain;
 
 import java.util.ArrayList;
@@ -18,6 +21,13 @@ public class Calendar {
 
     }
 
+    /**
+     * Metodi lisää kurssin tiettyyn periodiin kalenterinäkymää varten
+     * 
+     * @param course kurssi, jonka käyttäjä on antanyt tekstikäyttöliittymässä
+     * 
+     */
+    
     public void addCourse(Course course) {
         int period = course.getPeriod();
 
@@ -31,6 +41,12 @@ public class Calendar {
             fourthPeriod.add(course);
         }
     }
+    
+    /** 
+     * Metodi poistaa kursseja näkyvistä
+     * 
+     * @param course kurssi, jonka käyttäjä on antanyt tekstikäyttöliittymässä
+     */
     
     public void deleteCourse(Course course) {
         int period = course.getPeriod();
@@ -46,6 +62,12 @@ public class Calendar {
         }
     }
 
+    /**
+     * Metodi näyttää jonkin tietyn periodin kurssit
+     *  
+     * @param period kurssin periodi
+     * @return kurssien nimet ja niiden opintopisteiden määrä
+     */
     public String showPeriod(int period) {
         if (period == 1) {
             for (Course course : firstPeriod) {
@@ -67,6 +89,9 @@ public class Calendar {
         return "";
     }
 
+    /**
+     * Metodi joka tulostaa kaikki neljä periodia ja niiden alle niihin lisätyt kurssit
+     */
     public void showAll() {
         System.out.println("First period:");
         for (Course course : firstPeriod) {
@@ -87,7 +112,9 @@ public class Calendar {
         System.out.println("");
     }
     
-    
+    /**
+     * Metodi, joka kertoo syksyn kurssit (eli periodien 1 j 2)
+     */
     public void showAutumn() {
         System.out.println("ﾟ✧ Autumn periods ✧ﾟ");
         System.out.println("");
@@ -102,7 +129,9 @@ public class Calendar {
         }
         System.out.println("");
     }
-    
+    /**
+     * Metodi, joka näyttää kevään kurssit (eli periodit 3 ja 4)
+     */
     public void showSpring() {
         System.out.println("ﾟ✧ Spring periods ✧ﾟ\n\nThird period:");
         for (Course course : thirdPeriod) {
@@ -113,6 +142,7 @@ public class Calendar {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
         System.out.println("");
+        
     }
 
 }

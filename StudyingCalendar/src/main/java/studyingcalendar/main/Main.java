@@ -1,4 +1,6 @@
-
+/**
+ * Main luokka, jossa kutsutaan tekstikäyttöliittymää
+ */
 package studyingcalendar.main;
 
 import studyingcalendar.domain.Course;
@@ -9,7 +11,12 @@ import studyingcalendar.ui.TextInterface;
 
 public class Main {
 
-    public static void main(String[] args) {
+    /**
+     * Main metodi, kutsuu tekstikäyttöliittymää
+     * @param args -
+     * @throws Exception 
+     */
+    public static void main(String[] args) throws Exception {
         Scanner reader = new Scanner(System.in);
         TextInterface user = new TextInterface(reader);
         user.start();
