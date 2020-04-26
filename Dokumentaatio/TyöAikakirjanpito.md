@@ -12,4 +12,5 @@ Päivä | Aika tunteina | Mitä tehty
 14.4. | 1 | koodin eteenpäin tekemistä
 19.4. | 4 | koodailua ja tehtävien tekoa
 21.4. | 3 | Viimeisten tehtävien tekoa
-Yhteensä | 23 | 
+26.4. | 4 | Koodin saaminen melkein loppuun ja tehtävien kanssa taistelua ja pom.xml häviämistä
+Yhteensä | 27 | 
