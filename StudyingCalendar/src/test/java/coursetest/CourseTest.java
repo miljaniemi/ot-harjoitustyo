@@ -22,23 +22,20 @@ public class CourseTest {
     }
     
     @Test
-    public void ChangingPeriodWorks() {
+    public void GettingPeriodWorks() {
         Course ohpe = new Course("Ohjelmoinnin perusteet",1,5,false);
-        ohpe.setPeriod(3);
-        assertEquals(ohpe.getPeriod(),3);
+        assertEquals(ohpe.getPeriod(),1);
     }
     
     @Test
-    public void ChangingCreditsWorks() {
-        Course ohpe = new Course("Ohjelmoinnin perusteet",1,10,false);
-        ohpe.setCredit(5);
+    public void GettingCreditsWorks() {
+        Course ohpe = new Course("Ohjelmoinnin perusteet",1,5,false);
         assertEquals(ohpe.getCredit(),5);
     }
     
     @Test
-    public void ChangingNameWorks() {
-        Course ohpe = new Course("Ohpe",1,5,false);
-        ohpe.setName("Ohjelmoinnin perusteet");
+    public void GettingNameWorks() {
+        Course ohpe = new Course("Ohjelmoinnin perusteet",1,5,false);
         assertEquals(ohpe.getName(),"Ohjelmoinnin perusteet");
     }
     

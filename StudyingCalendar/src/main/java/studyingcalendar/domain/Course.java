@@ -1,4 +1,3 @@
-
 package studyingcalendar.domain;
 
 public class Course {
@@ -29,18 +28,6 @@ public class Course {
     
     public boolean getDone() {
         return this.done;
-    }
-    
-    public void setName(String name) {
-        this.name = name;
-    }
-    
-    public void setPeriod(int period) {
-        this.period = period;
-    }
-    
-    public void setCredit(int credit) {
-        this.credit = credit;
     }
     
     public void setDone(boolean done) {

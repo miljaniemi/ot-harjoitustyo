@@ -1,4 +1,3 @@
-
 package studyingcalendar.dao;
 
 import java.io.File;
@@ -39,15 +38,17 @@ public class FileCourseDao implements CourseDao {
             }
         }
     }
-    
-    @Override
-    public List<Course> getAll() {
-        return courses;
-    }
 
     @Override
     public Course create(Course course) throws Exception {
         courses.add(course);
+        save();
+        return course;
+    }
+
+    @Override
+    public Course delete(Course course) throws Exception {
+        courses.remove(course);
         save();
         return course;
     }
