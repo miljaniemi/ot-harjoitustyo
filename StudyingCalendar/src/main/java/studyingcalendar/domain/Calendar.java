@@ -68,25 +68,24 @@ public class Calendar {
      * @param period kurssin periodi
      * @return kurssien nimet ja niiden opintopisteiden määrä
      */
-    public String showPeriod(int period) {
+    public void showPeriod(int period) {
         if (period == 1) {
             for (Course course : firstPeriod) {
-                return course.getName() + ", " + course.getCredit() + " credits";
+                System.out.println(course.getName() + ", " + course.getCredit() + " credits");
             }
         } else if (period == 2) {
             for (Course course : secondPeriod) {
-                return course.getName() + ", " + course.getCredit() + " credits";
+                 System.out.println(course.getName() + ", " + course.getCredit() + " credits");
             }
         } else if (period == 3) {
             for (Course course : thirdPeriod) {
-                return course.getName() + ", " + course.getCredit() + " credits";
+                System.out.println(course.getName() + ", " + course.getCredit() + " credits");
             }
         } else if (period == 4) {
             for (Course course : fourthPeriod) {
-                return course.getName() + ", " + course.getCredit() + " credits";
+                 System.out.println(course.getName() + ", " + course.getCredit() + " credits");
             }
         }
-        return "";
     }
 
     /**

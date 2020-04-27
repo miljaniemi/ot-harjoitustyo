@@ -122,17 +122,13 @@ public class TextInterface {
             } else if (command.equals("x")) {
                 break;
             } else if (command.equals("1")) {
-                showPeriod(reader);
-                printStudentInstructors();
+                showPeriod();
             } else if (command.equals("2")) {
                 calendar.showAutumn();
-                printStudentInstructors();
             } else if (command.equals("3")) {
                 calendar.showSpring();
-                printStudentInstructors();
             } else if (command.equals("4")) {
                 calendar.showAll();
-                printStudentInstructors();
             }
         }
     }
@@ -152,11 +148,9 @@ public class TextInterface {
             } else if (command.equals("x")) {
                 break;
             } else if (command.equals("1")) {
-                addCourse(reader);
-                printHostInstructors();
+                addCourse();
             } else if (command.equals("2")) {
-                deleteCourse(reader);
-                printHostInstructors();
+                deleteCourse();
             }
         }
     }
@@ -166,13 +160,13 @@ public class TextInterface {
      * @param r lukija
      * @throws Exception 
      */
-    private void addCourse(Scanner r) throws Exception {
+    private void addCourse() throws Exception {
         System.out.print("Name of the course: ");
-        String name = r.nextLine();
+        String name = reader.nextLine();
         System.out.print("In which period? (give as a number): ");
-        int period = r.nextInt();
+        int period = Integer.parseInt(reader.nextLine());
         System.out.print("How many credits?: ");
-        int credit = r.nextInt();
+        int credit = Integer.parseInt(reader.nextLine());
         Course course = new Course(name, period, credit, false);
         if (dao.courses.contains(course)) {
             System.out.println("This course already exist!");
@@ -187,11 +181,11 @@ public class TextInterface {
      * @param r lukija
      * @throws Exception 
      */
-    private void deleteCourse(Scanner r) throws Exception {
+    private void deleteCourse() throws Exception {
         System.out.print("Name of the course you want to delete: ");
-        String name = r.nextLine();
+        String name = reader.nextLine();
         System.out.print("In which period? (give as a number): ");
-        int per = r.nextInt();
+        int per = Integer.parseInt(reader.nextLine());
         for (Course c : dao.courses) {
             if (c.getName().equals(name) && c.getPeriod() == per) {
                 c.setDone(true);
@@ -206,9 +200,9 @@ public class TextInterface {
      * @throws Exception 
      */
  
-    private void showPeriod(Scanner r) throws Exception {
+    private void showPeriod() throws Exception {
         System.out.print("Which period do you wish to see? (give as a number): ");
-        int p = r.nextInt();
+        int p = Integer.parseInt(reader.nextLine());
         calendar.showPeriod(p);
     }
 }
