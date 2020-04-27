@@ -34,3 +34,11 @@ Checkstyle tiedostoon checkstyle.xml määrittelemät tarkistukset komentorivill
 > mvn jxr:jxr checkstyle:checkstyle
 
 Virheilmoitukset löytyvät checkstyle.html:stä, joka löytyy reitillä *target/site/checkstyle.html*
+
+**JavaDoc**
+
+JavaDocin saa komentorivillä
+
+> JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/ mvn clean javadoc:javadoc
+
+*HUOM* koodi mvn javadoc:javadoc ei siis toimi. Yllä oleva komentorivi saatu Telegramista.
