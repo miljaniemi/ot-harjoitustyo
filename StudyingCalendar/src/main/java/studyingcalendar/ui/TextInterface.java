@@ -161,7 +161,8 @@ public class TextInterface {
      * @throws Exception 
      */
     private void addCourse() throws Exception {
-        System.out.print("Name of the course: ");
+        try {
+System.out.print("Name of the course: ");
         String name = reader.nextLine();
         System.out.print("In which period? (give as a number): ");
         int period = Integer.parseInt(reader.nextLine());
@@ -174,6 +175,9 @@ public class TextInterface {
             calendar.addCourse(course);
             dao.create(course);
         }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid format, use numbers");
+        }
     }
 
     /**
@@ -182,17 +186,22 @@ public class TextInterface {
      * @throws Exception 
      */
     private void deleteCourse() throws Exception {
-        System.out.print("Name of the course you want to delete: ");
+        try {
+                    System.out.print("Name of the course you want to delete: ");
         String name = reader.nextLine();
         System.out.print("In which period? (give as a number): ");
-        int per = Integer.parseInt(reader.nextLine());
-        for (Course c : dao.courses) {
+            int per = Integer.parseInt(reader.nextLine());
+            for (Course c : dao.courses) {
             if (c.getName().equals(name) && c.getPeriod() == per) {
                 c.setDone(true);
                 calendar.deleteCourse(c);
                 dao.delete(c);
             }
         }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid format, use numbers");
+        }
+        
     }
     /**
      * Oppilaan metodi, jossa voi valita mitä periodia haluaa tarkastella
@@ -201,8 +210,13 @@ public class TextInterface {
      */
  
     private void showPeriod() throws Exception {
-        System.out.print("Which period do you wish to see? (give as a number): ");
+        try {
+            System.out.print("Which period do you wish to see? (give as a number): ");
         int p = Integer.parseInt(reader.nextLine());
         calendar.showPeriod(p);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid format, use numbers");
+        }
+
     }
 }
