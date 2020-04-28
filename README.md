@@ -11,11 +11,12 @@ Opintokalenteri on ohjelma, joka on suunniteltu lähinnä omaan käyttöön. Sie
 
 [Arkkitehtuuri](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Arkkitehtuuri.md)
 
-[Käyttöohje]()
+[Käyttöohje](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Kayttoohje.md)
 
 ## Releaset
 
-[Viikko 5](https://github.com/miljaniemi/ot-harjoitustyo/releases)
+[Viikko 5](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko5)
+[Viiko 6](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Komentorivitoiminnot
   
