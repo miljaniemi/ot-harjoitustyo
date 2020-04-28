@@ -121,8 +121,9 @@ public class TextInterface {
         printStudentInstructors();
         while (true) {
             String command = reader.nextLine();
-            if (!studentCommands.keySet().contains(command)) System.out.println("Invalid command");printStudentInstructors();
-            if (command.equals("x")) {
+            if (!studentCommands.keySet().contains(command)) {
+                invalidCommandStudent();
+            } else if (command.equals("x")) {
                 break;
             } else if (command.equals("1")) {
                 showPeriod();
@@ -136,6 +137,14 @@ public class TextInterface {
         }
     }
 
+    /**
+     * Metodi, jonka avulla checkstyle toimii ja sitö kusutaan kun opiskelija antaa väärän komennon.
+     */
+    private void invalidCommandStudent() {
+        System.out.println("Invalid command");
+        printStudentInstructors();
+    }
+     
     /**
      * Metodi, kun on ylläpitäjä, voi lisätä tai poistaa kursseja
      *
