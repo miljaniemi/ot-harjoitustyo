@@ -6,6 +6,7 @@ package studyingcalendar.ui;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import studyingcalendar.domain.Calendar;
 import studyingcalendar.domain.Course;
 import java.util.Map;
@@ -128,11 +129,11 @@ public class TextInterface {
             } else if (command.equals("1")) {
                 showPeriod();
             } else if (command.equals("2")) {
-                calendar.showAutumn();
+                showAutumn();
             } else if (command.equals("3")) {
-                calendar.showSpring();
+                showSpring();
             } else if (command.equals("4")) {
-                calendar.showAll();
+                showAll();
             }
         }
     }
@@ -181,7 +182,8 @@ public class TextInterface {
             String name = reader.nextLine();
             System.out.print("In which period? (give as a number): ");
             int period = Integer.parseInt(reader.nextLine());
-            if (period != 1 || period != 2 || period != 3 || period != 4) {
+            System.out.println(period + " : period");
+            if (period < 1 || period > 4) {
                 System.out.println("There's only periods 1,2,3 and 4");
             } else {
                 System.out.print("How many credits?: ");
@@ -245,11 +247,73 @@ public class TextInterface {
             if (p != 1 || p != 2 || p != 3 || p != 4) {
                 System.out.println("There's only periods 1,2,3 and 4");
             } else {
-                calendar.showPeriod(p);
+                for (Course course : calendar.getList(p)) {
+                    System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+                }
             }
         } catch (NumberFormatException e) {
             System.out.println("Invalid format, use numbers");
         }
-
     }
+
+    /**
+     * Oppilaan metodi, palauttaa syksyn periodien kurssit.
+     *
+     * @throws Exception
+     */
+    private void showAutumn() throws Exception {
+        System.out.println("ﾟ✧ Autumn periods ✧ﾟ");
+        System.out.println("");
+        System.out.println("First period:");
+        for (Course course : calendar.getList(1)) {
+            System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+        }
+        System.out.println("");
+        System.out.println("Second period:");
+        for (Course course : calendar.getList(2)) {
+            System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+        }
+        System.out.println("");
+    }
+
+    /**
+     * Oppilaan metodi, joka palauttaa kevään perioidien kurssit
+     * @throws Exception 
+     */
+    private void showSpring() throws Exception {
+        System.out.println("ﾟ✧ Spring periods ✧ﾟ\n\nThird period:");
+        for (Course course : calendar.getList(3)) {
+            System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+        }
+        System.out.println("\nFourth period:");
+        for (Course course : calendar.getList(4)) {
+            System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+        }
+        System.out.println("");
+    }
+
+    /**
+     * Oppilaan metodi, joka palauttaa kaikki 4 periodia ja niiden sisältämät kurssit
+     * @throws Exception 
+     */
+    private void showAll() throws Exception {
+        System.out.println("First period:");
+        for (Course course : calendar.getList(1)) {
+            System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+        }
+        System.out.println("\nSecond period:");
+        for (Course course : calendar.getList(2)) {
+            System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+        }
+        System.out.println("\nThird period:");
+        for (Course course : calendar.getList(3)) {
+            System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+        }
+        System.out.println("\nFourth period:");
+        for (Course course : calendar.getList(4)) {
+            System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+        }
+        System.out.println("");
+    }
+
 }
