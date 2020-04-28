@@ -11,13 +11,15 @@ Opintokalenteri on ohjelma, joka on suunniteltu lähinnä omaan käyttöön. Sie
 
 [Arkkitehtuuri](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Arkkitehtuuri.md)
 
+[Käyttöohje]()
+
 ## Releaset
 
 [Viikko 5](https://github.com/miljaniemi/ot-harjoitustyo/releases)
 
 ## Komentorivitoiminnot
   
-**Testaus**
+### Testaus
 
 Testit saa komentorivillä
 
@@ -27,7 +29,7 @@ Testikattavuusraportin saa komentorivillä
 
 > mvn jacoco:report
 
-**Checkstyle**
+### Checkstyle
 
 Checkstyle tiedostoon checkstyle.xml määrittelemät tarkistukset komentorivillä
 
@@ -35,7 +37,7 @@ Checkstyle tiedostoon checkstyle.xml määrittelemät tarkistukset komentorivill
 
 Virheilmoitukset löytyvät checkstyle.html:stä, joka löytyy reitillä *StudyingCalendar/target/site/checkstyle.html*
 
-**JavaDoc**
+### JavaDoc
 
 JavaDocin saa komentorivillä
 
@@ -43,7 +45,7 @@ JavaDocin saa komentorivillä
 
 *HUOM* koodi mvn javadoc:javadoc ei siis toimi. Yllä oleva komentorivi saatu Telegramista.
 
-**Jar-generointi ja avaus**
+### Jar-generointi ja avaus
 
 Jar tiedoston voi luoda komentorivillä
 
