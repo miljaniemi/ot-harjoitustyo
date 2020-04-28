@@ -13,4 +13,6 @@ Päivä | Aika tunteina | Mitä tehty
 19.4. | 4 | koodailua ja tehtävien tekoa
 21.4. | 3 | Viimeisten tehtävien tekoa
 26.4. | 4 | Koodin saaminen melkein loppuun ja tehtävien kanssa taistelua ja pom.xml:lle häviämistä
-Yhteensä | 27 | 
+27.4. | 1,5 | Koodin korjaus. Valmis nyt?? pom.xml:n voittaminen(!) ja tehtävien teko
+28.4. | aloitus . 14.15 | Tehtävät loppuun ja jarin taistelun voitto! 
+Yhteensä | 28,5 | 
