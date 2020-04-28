@@ -11,14 +11,17 @@ import studyingcalendar.domain.Course;
 
 public class Calendar {
 
-    ArrayList<Course> firstPeriod = new ArrayList<>();
-    ArrayList<Course> secondPeriod = new ArrayList<>();
-    ArrayList<Course> thirdPeriod = new ArrayList<>();
-    ArrayList<Course> fourthPeriod = new ArrayList<>();
+    ArrayList<Course> firstPeriod;
+    ArrayList<Course> secondPeriod;
+    ArrayList<Course> thirdPeriod;
+    ArrayList<Course> fourthPeriod;
     Course course;
 
     public Calendar() {
-
+        firstPeriod = new ArrayList<>();
+        secondPeriod = new ArrayList<>();
+        thirdPeriod = new ArrayList<>();
+        fourthPeriod = new ArrayList<>();
     }
 
     /**
@@ -142,6 +145,24 @@ public class Calendar {
         }
         System.out.println("");
         
+    }
+    
+    /**
+     * Metodi, joka auttaa testeissä. Palauttaa listana jonkin tietyn periodin.
+     * @param period periodi, jonka lista halutaan
+     * @return 
+     */
+    public ArrayList<Course> getList(int period) {
+        if (period == 1) {
+            return firstPeriod;
+        } else if (period == 2) {
+            return secondPeriod;
+        } else if (period == 3) {
+            return thirdPeriod;
+        } else if (period == 4) {
+            return fourthPeriod;
+        }
+        return null;
     }
 
 }
