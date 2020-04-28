@@ -77,6 +77,17 @@ public class FileCourseDao implements CourseDao {
         save();
         return course;
     }
+    
+    /**
+     * Metodi, joka palauttaa listan kaikista kursseista
+     * @return Course muotoisen listan
+     * @throws Exception 
+     */
+    
+    @Override
+    public List<Course> allCourses() throws Exception {
+        return courses;
+    }
 
     
 }

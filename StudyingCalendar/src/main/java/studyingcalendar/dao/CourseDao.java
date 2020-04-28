@@ -7,5 +7,6 @@ public interface CourseDao {
     
     Course create(Course course) throws Exception;
     Course delete(Course course) throws Exception;
+    List<Course> allCourses() throws Exception;
 
 }

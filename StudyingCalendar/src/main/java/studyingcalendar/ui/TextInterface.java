@@ -182,7 +182,6 @@ public class TextInterface {
             String name = reader.nextLine();
             System.out.print("In which period? (give as a number): ");
             int period = Integer.parseInt(reader.nextLine());
-            System.out.println(period + " : period");
             if (period < 1 || period > 4) {
                 System.out.println("There's only periods 1,2,3 and 4");
             } else {
@@ -192,7 +191,7 @@ public class TextInterface {
                     System.out.println("Not realistic amount. Try between 1-25");
                 } else {
                     Course course = new Course(name, period, credit, false);
-                    if (dao.courses.contains(course)) {
+                    if (courseAlreadyExist(course) == true) {
                         System.out.println("This course already exist!");
                     } else {
                         calendar.addCourse(course);
@@ -217,12 +216,11 @@ public class TextInterface {
             String name = reader.nextLine();
             System.out.print("In which period? (give as a number): ");
             int per = Integer.parseInt(reader.nextLine());
-            if (per != 1 || per != 2 || per != 3 || per != 4) {
+            if (per < 1 || per > 4) {
                 System.out.println("There's only periods 1,2,3 and 4");
             } else {
-                for (Course c : dao.courses) {
+                for (Course c : calendar.getList(per)) {
                     if (c.getName().equals(name) && c.getPeriod() == per) {
-                        c.setDone(true);
                         calendar.deleteCourse(c);
                         dao.delete(c);
                     }
@@ -244,7 +242,7 @@ public class TextInterface {
         try {
             System.out.print("Which period do you wish to see? (give as a number): ");
             int p = Integer.parseInt(reader.nextLine());
-            if (p != 1 || p != 2 || p != 3 || p != 4) {
+            if (p < 1 || p > 4) {
                 System.out.println("There's only periods 1,2,3 and 4");
             } else {
                 for (Course course : calendar.getList(p)) {
@@ -314,6 +312,24 @@ public class TextInterface {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
         System.out.println("");
+    }
+    
+    /**
+     * Metodi, joka tarkistaa onko samaa kurssia aiemmin luotu, jottai ole samaa kurssia useaan kertaan
+     * @param course kurssi, jota verrataan muihin
+     * @return kurssi jo olemassa (true) tai sitä ei ole (false)
+     * @throws Exception 
+     */
+    
+    private boolean courseAlreadyExist(Course course) throws Exception {
+        String name = course.getName();
+        int period = course.getPeriod();
+        for (Course c : calendar.getList(period)) {
+            if (c.getName().matches(name) && c.getPeriod() == period) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
