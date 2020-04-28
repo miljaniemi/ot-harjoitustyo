@@ -43,7 +43,13 @@ JavaDocin saa komentorivillä
 
 *HUOM* koodi mvn javadoc:javadoc ei siis toimi. Yllä oleva komentorivi saatu Telegramista.
 
-**Jar-generointi**
+**Jar-generointi ja avaus**
+
+Jar tiedoston voi luoda komentorivillä
+
+> mvn package
+
+Se löytyy kansiosta *StudyingCalendar/target* (oikea on se jonka nimessä **ei** ole sanaa *original*)
 
 Jar-tiedoston voi avata kansiossa target jonne pääsee reitillä *StudyingCalendar/target/* komentorivillä
 
