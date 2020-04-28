@@ -51,8 +51,8 @@
                 <version>0.8.3</version>
                 <configuration>
                     <excludes>
-                        <exclude>studyingcalendar.ui/*</exclude>
-                        <exclude>studyingcalendar.main/*</exclude>
+                        <exclude>studyingcalendar/ui/*</exclude>
+                        <exclude>studyingcalendar/main/*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
