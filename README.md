@@ -44,7 +44,9 @@ JavaDocin saa komentorivillä
 
 > JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/ mvn clean javadoc:javadoc
 
-*HUOM* koodi mvn javadoc:javadoc ei siis toimi. Yllä oleva komentorivi saatu Telegramista.
+*HUOM* koodi mvn javadoc:javadoc ei siis toimi. Yllä oleva komentorivi saatu Telegramista. Löytyy reitillä *StudyingCalendar/target/site/apidocs/allclasses.html* jonka saa auki kansiossa apidocs komentorivillä
+
+> browse allclasses.html
 
 ### Jar-generointi ja avaus
 
