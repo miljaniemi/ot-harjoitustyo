@@ -138,13 +138,14 @@ public class TextInterface {
     }
 
     /**
-     * Metodi, jonka avulla checkstyle toimii ja sitö kusutaan kun opiskelija antaa väärän komennon.
+     * Metodi, jonka avulla checkstyle toimii ja sitö kusutaan kun opiskelija
+     * antaa väärän komennon.
      */
     private void invalidCommandStudent() {
         System.out.println("Invalid command");
         printStudentInstructors();
     }
-     
+
     /**
      * Metodi, kun on ylläpitäjä, voi lisätä tai poistaa kursseja
      *
@@ -180,14 +181,22 @@ public class TextInterface {
             String name = reader.nextLine();
             System.out.print("In which period? (give as a number): ");
             int period = Integer.parseInt(reader.nextLine());
-            System.out.print("How many credits?: ");
-            int credit = Integer.parseInt(reader.nextLine());
-            Course course = new Course(name, period, credit, false);
-            if (dao.courses.contains(course)) {
-                System.out.println("This course already exist!");
+            if (period != 1 || period != 2 || period != 3 || period != 4) {
+                System.out.println("There's only periods 1,2,3 and 4");
             } else {
-                calendar.addCourse(course);
-                dao.create(course);
+                System.out.print("How many credits?: ");
+                int credit = Integer.parseInt(reader.nextLine());
+                if (credit < 1 || credit > 25) {
+                    System.out.println("Not realistic amount. Try between 1-25");
+                } else {
+                    Course course = new Course(name, period, credit, false);
+                    if (dao.courses.contains(course)) {
+                        System.out.println("This course already exist!");
+                    } else {
+                        calendar.addCourse(course);
+                        dao.create(course);
+                    }
+                }
             }
         } catch (NumberFormatException e) {
             System.out.println("Invalid format, use numbers");
@@ -206,11 +215,15 @@ public class TextInterface {
             String name = reader.nextLine();
             System.out.print("In which period? (give as a number): ");
             int per = Integer.parseInt(reader.nextLine());
-            for (Course c : dao.courses) {
-                if (c.getName().equals(name) && c.getPeriod() == per) {
-                    c.setDone(true);
-                    calendar.deleteCourse(c);
-                    dao.delete(c);
+            if (per != 1 || per != 2 || per != 3 || per != 4) {
+                System.out.println("There's only periods 1,2,3 and 4");
+            } else {
+                for (Course c : dao.courses) {
+                    if (c.getName().equals(name) && c.getPeriod() == per) {
+                        c.setDone(true);
+                        calendar.deleteCourse(c);
+                        dao.delete(c);
+                    }
                 }
             }
         } catch (NumberFormatException e) {
@@ -225,12 +238,15 @@ public class TextInterface {
      * @param r lukija
      * @throws Exception
      */
-
     private void showPeriod() throws Exception {
         try {
             System.out.print("Which period do you wish to see? (give as a number): ");
             int p = Integer.parseInt(reader.nextLine());
-            calendar.showPeriod(p);
+            if (p != 1 || p != 2 || p != 3 || p != 4) {
+                System.out.println("There's only periods 1,2,3 and 4");
+            } else {
+                calendar.showPeriod(p);
+            }
         } catch (NumberFormatException e) {
             System.out.println("Invalid format, use numbers");
         }
