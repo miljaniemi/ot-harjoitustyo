@@ -1,7 +1,6 @@
 /**
  * Luokka, joka sisältää tektikäyttöliittymän
  */
-        
 package studyingcalendar.ui;
 
 import java.io.FileInputStream;
@@ -27,10 +26,11 @@ public class TextInterface {
 
     /**
      * Metodi, jossa määritellään tarvittavat parametrit, sekä komennot
+     *
      * @param reader lukija, joilla saadaan komennot
      * @throws FileNotFoundException
      * @throws IOException
-     * @throws Exception 
+     * @throws Exception
      */
     public TextInterface(Scanner reader) throws FileNotFoundException, IOException, Exception {
         this.reader = reader;
@@ -56,8 +56,10 @@ public class TextInterface {
     }
 
     /**
-     * Metodi, jota kutsutaan mainista ja tässä metodissa päätetään, onko käyttäjä ylläpitäjä vai oppilas
-     * @throws Exception 
+     * Metodi, jota kutsutaan mainista ja tässä metodissa päätetään, onko
+     * käyttäjä ylläpitäjä vai oppilas
+     *
+     * @throws Exception
      */
     public void start() throws Exception {
         calendarUpToDate();
@@ -97,7 +99,8 @@ public class TextInterface {
 
     /**
      * Metodi päivittää kalenterin tallennetut kurssit
-     * @throws Exception 
+     *
+     * @throws Exception
      */
     private void calendarUpToDate() throws Exception {
         if (dao.courses.isEmpty() == false) {
@@ -108,18 +111,18 @@ public class TextInterface {
     }
 
     /**
-     * Metodi, jota käytetään kun on oppilaana, voi valita haluaako tutkia yhtä periodia, syksyn tai kevään periodeja sekä kaikkia periodeja
-     * @throws Exception 
+     * Metodi, jota käytetään kun on oppilaana, voi valita haluaako tutkia yhtä
+     * periodia, syksyn tai kevään periodeja sekä kaikkia periodeja
+     *
+     * @throws Exception
      */
     private void youreStudent() throws Exception {
         System.out.println("You're a student!");
         printStudentInstructors();
         while (true) {
             String command = reader.nextLine();
-            if (!studentCommands.keySet().contains(command)) {
-                System.out.println("Invalid command");
-                printStudentInstructors();
-            } else if (command.equals("x")) {
+            if (!studentCommands.keySet().contains(command)) System.out.println("Invalid command");printStudentInstructors();
+            if (command.equals("x")) {
                 break;
             } else if (command.equals("1")) {
                 showPeriod();
@@ -135,7 +138,8 @@ public class TextInterface {
 
     /**
      * Metodi, kun on ylläpitäjä, voi lisätä tai poistaa kursseja
-     * @throws Exception 
+     *
+     * @throws Exception
      */
     private void youreHost() throws Exception {
         System.out.println("You're a host!");
@@ -157,24 +161,25 @@ public class TextInterface {
 
     /**
      * Ylläpitäjän metodi, voi lisätä kurssin syötteen avulla
+     *
      * @param r lukija
-     * @throws Exception 
+     * @throws Exception
      */
     private void addCourse() throws Exception {
         try {
-System.out.print("Name of the course: ");
-        String name = reader.nextLine();
-        System.out.print("In which period? (give as a number): ");
-        int period = Integer.parseInt(reader.nextLine());
-        System.out.print("How many credits?: ");
-        int credit = Integer.parseInt(reader.nextLine());
-        Course course = new Course(name, period, credit, false);
-        if (dao.courses.contains(course)) {
-            System.out.println("This course already exist!");
-        } else {
-            calendar.addCourse(course);
-            dao.create(course);
-        }
+            System.out.print("Name of the course: ");
+            String name = reader.nextLine();
+            System.out.print("In which period? (give as a number): ");
+            int period = Integer.parseInt(reader.nextLine());
+            System.out.print("How many credits?: ");
+            int credit = Integer.parseInt(reader.nextLine());
+            Course course = new Course(name, period, credit, false);
+            if (dao.courses.contains(course)) {
+                System.out.println("This course already exist!");
+            } else {
+                calendar.addCourse(course);
+                dao.create(course);
+            }
         } catch (NumberFormatException e) {
             System.out.println("Invalid format, use numbers");
         }
@@ -182,38 +187,41 @@ System.out.print("Name of the course: ");
 
     /**
      * Ylläpitäjän metodi kurssin poistamista varten
+     *
      * @param r lukija
-     * @throws Exception 
+     * @throws Exception
      */
     private void deleteCourse() throws Exception {
         try {
-                    System.out.print("Name of the course you want to delete: ");
-        String name = reader.nextLine();
-        System.out.print("In which period? (give as a number): ");
+            System.out.print("Name of the course you want to delete: ");
+            String name = reader.nextLine();
+            System.out.print("In which period? (give as a number): ");
             int per = Integer.parseInt(reader.nextLine());
             for (Course c : dao.courses) {
-            if (c.getName().equals(name) && c.getPeriod() == per) {
-                c.setDone(true);
-                calendar.deleteCourse(c);
-                dao.delete(c);
+                if (c.getName().equals(name) && c.getPeriod() == per) {
+                    c.setDone(true);
+                    calendar.deleteCourse(c);
+                    dao.delete(c);
+                }
             }
-        }
         } catch (NumberFormatException e) {
             System.out.println("Invalid format, use numbers");
         }
-        
+
     }
+
     /**
      * Oppilaan metodi, jossa voi valita mitä periodia haluaa tarkastella
+     *
      * @param r lukija
-     * @throws Exception 
+     * @throws Exception
      */
- 
+
     private void showPeriod() throws Exception {
         try {
             System.out.print("Which period do you wish to see? (give as a number): ");
-        int p = Integer.parseInt(reader.nextLine());
-        calendar.showPeriod(p);
+            int p = Integer.parseInt(reader.nextLine());
+            calendar.showPeriod(p);
         } catch (NumberFormatException e) {
             System.out.println("Invalid format, use numbers");
         }

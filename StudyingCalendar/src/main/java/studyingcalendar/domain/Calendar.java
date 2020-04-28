@@ -75,7 +75,7 @@ public class Calendar {
             }
         } else if (period == 2) {
             for (Course course : secondPeriod) {
-                 System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+                System.out.println(course.getName() + ", " + course.getCredit() + " credits");
             }
         } else if (period == 3) {
             for (Course course : thirdPeriod) {
@@ -83,7 +83,7 @@ public class Calendar {
             }
         } else if (period == 4) {
             for (Course course : fourthPeriod) {
-                 System.out.println(course.getName() + ", " + course.getCredit() + " credits");
+                System.out.println(course.getName() + ", " + course.getCredit() + " credits");
             }
         }
     }
