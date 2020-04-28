@@ -51,10 +51,10 @@ Jar tiedoston voi luoda komentorivillä
 
 > mvn package
 
-Se löytyy kansiosta *StudyingCalendar/target* (oikea on se jonka nimessä **ei** ole sanaa *original*)
+Se löytyy kansiosta *StudyingCalendar/target* (oikea on se jonka nimessä **ei** ole sanaa *original*). Releasessa nimi muutettu nimeksi *SClander.jar* ja tätä nimeä käytetään alla. Jos jar-tiedosto, jonka haluat avata eri nimellä, korvaa alla olevaan komentoriviin oikea nimi.
 
 Jar-tiedoston voi avata kansiossa target jonne pääsee reitillä *StudyingCalendar/target/* komentorivillä
 
-> java -jar StudyingCalendar-1.0-SNAPSHOT.jar
+> java -jar SCalendar.jar
 
 **HUOM** Huomaa, että myös target kansion sisälle tiedoston nimeltä *config.properties* jonka sisällä lukee *courseFile=courses.txt*. Muuten sen avaaminen ei onnistu. Huomaa myös, että tämä on eri pysyväistallennus kuin se, joka on kansion StudyingCalendar sisällä ja jota luetaan netBeansin versiossa, joten niiden pysyväistallennetut kurssit voivat vaihdella, riippuen mitä olet tallentanut mihinkin.
