@@ -17,11 +17,11 @@
 
 **Toiminnallisuudet**
 
-- Opiskelija näkee omat käymättä olevat kurssit (tehty! Kurssit pysyvät tallella ja näkyvät pyynnöstä (ks. alempi))
-- Näkee missä periodissa menee mitäkin (Yksittäisen kurssin katsominen ei toimi. Syys- ja kevätkaudet näkytvät sekä kaikki)
-- Kurssi katoaa kun se käyty (Ylläpitäjä merkkaa)(tehty!)
-- Vain ylläpitäjä saa lisätä ja poistaa kursseja, sekä määritellä niiden sijoittamisesta (tehty!)
-- Sisäänkirjautuessa valitaan joko ylläpito vai opiskelija (Itse toimin kumpanakin) (tehty! ei salasanaa, mutta niin ei pitänytkään)
+- Opiskelija näkee omat käymättä olevat kurssit (**tehty!** Kurssit pysyvät tallella ja näkyvät pyynnöstä)
+- Näkee missä periodissa menee mitäkin (**tehty!** Yksittäinen, lukukausi ja lukuvuosi näkymät kaikki toimivat)
+- Kurssi katoaa kun se käyty (Ylläpitäjä merkkaa)(**tehty!**)
+- Vain ylläpitäjä saa lisätä ja poistaa kursseja, sekä määritellä niiden sijoittamisesta (**tehty!**)
+- Sisäänkirjautuessa valitaan joko ylläpito vai opiskelija (Itse toimin kumpanakin) (**tehty!** ei salasanaa, mutta niin ei pitänytkään)
 
 **Mahdollisia jatkotoiminnallisuuksia**
 
@@ -29,3 +29,4 @@
 - Mahdolliset salasanat ja tunnukset
 - Arvosanojen näkyminen käydyissä kursseissa
 - Käydyt kurssit näkyvät
+- Yläreunassa periodin kurssien yhteinen opintopistemäärä
