@@ -34,4 +34,4 @@ Kaikki [määrittelydokumentin](https://github.com/miljaniemi/ot-harjoitustyo/bl
 
 ### Sovellukseen jääneet laatuongelmat
 
-Periodin nimi on haastavasti havaittavissa sen kursseihin verrattuna. Se ei myöskään ilmoita, jos kurssin poisto ei onnistunut. Samoin kurssin lisäyksen onnistumisesta ei ilmoiteta.
+Periodin nimi on haastavasti havaittavissa sen kursseihin verrattuna. Se ei myöskään ilmoita, jos kurssin poisto ei onnistunut. Samoin kurssin lisäyksen onnistumisesta ei ilmoiteta. Checkstyle antaa kaksi virhettä, kahdesta liian pitkästä metodista. Ne ovat pitkiä virheellisen syötteen ilmoittamisen vuoksi, joten nämä virheet voi katsoa läpi sormien.
