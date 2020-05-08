@@ -25,14 +25,19 @@ Alla vielä suhteet luokka-/pakkauskaaviona
 
 ## Sekvenssikaaviot
 
-**Sissänkirjautuminen ylläpitäjäksi**
+**Sisäänkirjautuminen ylläpitäjäksi ensimmäistä kertaa**
 
+Kun on käyttöliittymässä valittu, että käytetään ylläpidon oikeuksia, kutsutaan metodia, joka tarkistaa onko määritelty salasanaa vai ei.
+
+![Salasanan luonti](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/kuvat./UusiSalasana.png?raw=true)
+
+Metodi kutsuu FilePasswordDao-luokkaa, jossa on tallennettuna salasana, jos se on olemassa. Tässä tapauksessa se palauttaa arvon null. Nyt kutsutaan metodia createNewPassword, joka pyytää käyttäjää syöttämään salasanan, jolla tulevaisuudessa kirjaudutaan sisään. Käyttäjä antaa syötteeksi salasanalle "password". Tämän jälkeen käyttöliittymä kutsuu jälleen FilePasswordDao-luokkaa ja sen metodia save(), jonka parametrina on "password", eli String muotoinen salasana. Tämän jälkeen käyttöliittymä kutsuu vielä metodia youreHost() ja avautuu ylläpitäjän näkymä.
 
 
 **Uuden kurssin luonti**
 
-Kun on tekstikäyttöliittymässä valittu, että käytetään ylläpitäjän oikeuksia ja ohjeet on kerrottu. Kirjoitetaan komennoksi yksi ja lisätään kurssi
+Nyt on päästy ylläpitäjän oikeuksiin ja voi alkaa lisäämään kurssia. Tätä metodia kutsutaan komennolla 1.
 
-![kurssin lisäys](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/kuvat./sekvenssikaavio1.png?raw=true)
+![kurssin lisäys](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/kuvat./UudenKurssinLuonti.png?raw=true)
 
-User eli ohjelman käyttäjä antaa komennon joka kutsuu tekstikäyttöliittymän metodia addcourse(). Tässä komennossa tekstikäyttöjärjestelmä kutsuu Calendar luokan metodia addCourse parametrinaan uusi kurssi, jonka arvot käyttäjä on antanut. Calendar luokan metodissa kutsutaan uuden kurssin getteriä periodin saamiseksi. Tämä palauttaa arvon 4. Tämän jälkeen kun tiedetään kurssin periodi, se lisätään oikeaan listaan. Tekstikäyttöliittymä kutsuu myös pysyväistallennuksesta huolehtivaa FileCourseDao-luokkaa ja sen metodia create heti Calendar luokan kutsun jälkeen. Dao-luokassa se kutsuu sisällään vielä save metodia, joka tallentaa uuden kurssin tiedostoon talteen muodossa *kurssinnimi;periodi;opintopisteet;käyty\n"* ja tässä \n siis tarkoittaa rivin vaihtoa. Kyseisen esimerkin tapauksessa kurssi tallennettaisiin muodossa *Ohjelmistotekniikka;4;5;false\n*
+User eli ohjelman käyttäjä antaa komennon joka kutsuu tekstikäyttöliittymän metodia addcourse(). Tässä komennossa tekstikäyttöjärjestelmä kutsuu Calendar luokan metodia addCourse parametrinaan uusi kurssi, jonka arvot käyttäjä on antanut. Calendar luokan metodissa kutsutaan uuden kurssin getteriä periodin saamiseksi. Tämä palauttaa arvon 4. Tämän jälkeen kun tiedetään kurssin periodi, se lisätään oikeaan listaan. Tekstikäyttöliittymä kutsuu myös pysyväistallennuksesta huolehtivaa FileCourseDao-luokkaa ja sen metodia create heti Calendar luokan kutsun jälkeen. Dao-luokassa se kutsuu sisällään vielä save metodia, joka tallentaa uuden kurssin tiedostoon talteen muodossa *kurssinnimi;periodi;opintopisteet\n"* ja tässä \n siis tarkoittaa rivin vaihtoa. Kyseisen esimerkin tapauksessa kurssi tallennettaisiin muodossa *Ohjelmistotekniikka;4;5\n*
