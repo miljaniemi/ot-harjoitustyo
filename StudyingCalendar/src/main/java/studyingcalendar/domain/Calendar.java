@@ -17,6 +17,9 @@ public class Calendar {
     ArrayList<Course> fourthPeriod;
     Course course;
 
+    /**
+     * Metodi, joka luo uuden kalenterin.
+     */
     public Calendar() {
         firstPeriod = new ArrayList<>();
         secondPeriod = new ArrayList<>();

@@ -1,3 +1,7 @@
+/**
+ * Luokka, joka tallentaa salasanan ylläpitäjälle
+ */
+
 
 package studyingcalendar.dao;
 

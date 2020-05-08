@@ -23,13 +23,28 @@ public class Course {
         this.credit = credit;
     }
     
+    /**
+     * Metodi, joka palauttaa kurssin nimen
+     * @return kurssin nimi
+     */
+    
     public String getName() {
         return this.name;
     }
     
+    /**
+     * Metodi, joka palauttaa periodin, jossa kyseinen kurssi on
+     * @return kurssin periodi
+     */
+    
     public int getPeriod() {
         return this.period;
     }
+    
+    /**
+     * Metodi, joka palauttaa kurssin opintopistemäärän
+     * @return kurssin opintopistemäärä
+     */
     
     public int getCredit() {
         return this.credit;
