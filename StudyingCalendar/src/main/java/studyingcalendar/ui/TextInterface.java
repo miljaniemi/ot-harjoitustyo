@@ -14,6 +14,7 @@ import java.util.Properties;
 import java.util.Scanner;
 import java.util.TreeMap;
 import studyingcalendar.dao.FileCourseDao;
+import studyingcalendar.dao.FilePasswordDao;
 
 public class TextInterface {
 
@@ -24,6 +25,7 @@ public class TextInterface {
     private Course course;
     private Calendar calendar;
     private FileCourseDao dao;
+    private FilePasswordDao passwordDao;
 
     /**
      * Metodi, jossa määritellään tarvittavat parametrit, sekä komennot
@@ -39,6 +41,8 @@ public class TextInterface {
         Properties properties = new Properties();
         properties.load(new FileInputStream("config.properties"));
         String courseFile = properties.getProperty("courseFile");
+        String passwordFile = properties.getProperty("passwordFile");
+        passwordDao = new FilePasswordDao(passwordFile);
         dao = new FileCourseDao(courseFile);
         studentOrHost = new TreeMap<>();
         hostCommands = new TreeMap<>();
@@ -74,7 +78,7 @@ public class TextInterface {
             if (command.equals("x")) {
                 break;
             } else if (command.equals("1")) {
-                youreHost();
+                areYouAHost();
                 break;
 
             } else if (command.equals("2")) {
@@ -84,6 +88,36 @@ public class TextInterface {
         }
     }
 
+    public void areYouAHost() throws Exception {
+        if (passwordDao.getPassword() == null) {
+            createNewPassword();
+        } else {
+            
+        }
+    }
+    
+    public void createNewPassword() throws Exception {
+        System.out.println("Welcome! Please write your new password. From now on, you need to login using it, so try to remember it :)");
+        String password = reader.nextLine();
+        passwordDao.save(password);
+        if (passwordDao.getPassword().matches(password)) {
+            System.out.println("Password is saved!");
+        } else {
+            System.out.println("Something went wrong, your password was not saved");
+        }
+    }
+    
+    public void askForPassword() throws Exception {
+        System.out.println("Please type in your password:");
+        String password = reader.nextLine();
+        if (passwordDao.getPassword().matches(password)) {
+            youreHost();
+        } else {
+            System.out.println("Invalid password. Try again");
+            askForPassword();
+        }
+    }
+    
     /**
      * Metodi tulostaa ylläpitäjän komentojen ohjeet
      */
