@@ -16,7 +16,7 @@ Opintokalenteri on ohjelma, joka on suunniteltu lähinnä omaan käyttöön. Sie
 ## Releaset
 
 [Viikko 5](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko5)
-[Viiko 6](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko6)
+[Viikko 6](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Komentorivitoiminnot
   
@@ -42,9 +42,9 @@ Virheilmoitukset löytyvät checkstyle.html:stä, joka löytyy reitillä *Studyi
 
 JavaDocin saa komentorivillä
 
-> JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/ mvn clean javadoc:javadoc
+>  mvn javadoc:javadoc
 
-*HUOM* koodi mvn javadoc:javadoc ei siis toimi. Yllä oleva komentorivi saatu Telegramista. Löytyy reitillä *StudyingCalendar/target/site/apidocs/allclasses.html* jonka saa auki kansiossa apidocs komentorivillä
+**HUOM** jos koodi mvn javadoc:javadoc ei toimi, kokeile komentoriviä *JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/ mvn clean javadoc:javadoc*. Edellä oleva komentorivi saatu Telegramista. Löytyy reitillä *StudyingCalendar/target/site/apidocs/allclasses.html* jonka saa auki kansiossa apidocs komentorivillä
 
 > browse allclasses.html
 
@@ -60,4 +60,4 @@ Jar-tiedoston voi avata kansiossa target jonne pääsee reitillä *StudyingCalen
 
 > java -jar SCalendar.jar
 
-**HUOM** Huomaa, että myös target kansion sisälle tiedoston nimeltä *config.properties* jonka sisällä lukee *courseFile=courses.txt*. Muuten sen avaaminen ei onnistu. Huomaa myös, että tämä on eri pysyväistallennus kuin se, joka on kansion StudyingCalendar sisällä ja jota luetaan netBeansin versiossa, joten niiden pysyväistallennetut kurssit voivat vaihdella, riippuen mitä olet tallentanut mihinkin.
+**HUOM** Huomaa, että myös target kansion sisälle tiedoston nimeltä *config.properties* jonka sisällä lukee *courseFile=courses.txt* sekä toisella rivillä *passwordFile=password.txt*. Muuten sen avaaminen ei onnistu. Huomaa myös, että tämä on eri pysyväistallennus kuin se, joka on kansion StudyingCalendar sisällä ja jota luetaan netBeansin versiossa, joten niiden pysyväistallennetut kurssit voivat vaihdella, riippuen mitä olet tallentanut mihinkin.
