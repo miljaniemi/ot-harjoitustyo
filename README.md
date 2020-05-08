@@ -21,7 +21,7 @@ Opintokalenteri on ohjelma, joka on suunniteltu lähinnä omaan käyttöön. Sie
 
 [Viikko 6](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko6)
 
-[Viikko 7](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko7)
+[Loppupalautus](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko7)
 
 ## Komentorivitoiminnot
   
