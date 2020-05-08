@@ -52,3 +52,12 @@ Ylläpitäjän tilassa käyttäjä kutsuu kurssin poistamismetodia
 
 Tekstikäyttöliittymä kutsuu Calendar luokan getList()-metodia, joka palauttaa ArrayListin, jossa on olioina Course-luokan kursseja. Kutsutaan vielä tiettyä periodia 4. Tämän jälkeen käydään listaa läpi ja kusutaan kurssille nimeltä *Ohjelmistotekniikka* tunnuksella *ohte* metodeja getName() seka getPeriod, jotka luokka palauttaa. Näillä arvoilla on löydetty kurssi joka halutaan poistaa. Nyt Calendar luokan metodi poistaa kurssin tiedoistaan (ensin kysyän jälleen metodilla getPeriod() oikean periodin). Myös dao-luokka FileCourseDao poistaa luokan. Tämä poistaa sen myös tiedostosta, joten kun kutsutaan metodia save(), katoaa kurssi pysyväistallennuksestakin.
 
+## Ohjelman rakenteeseen jääneet heikkoudet
+
+**Käyttöliittymä**
+
+Käyttöliittymän iso heikkous on, ettei ylläpitäjän salasanaa voi muuttaa sovelluksessa. Sen voi asettaa vain kerran, ja sen jälkeen jos se unohtaa, on se muokattava itse tiedostoon (esimerkiksi terminaalilla), mihin edellinen on tallennettu.
+
+**Dao-luokat**
+
+On hieman turhaa luoda oma luokka salasanaa varten, mutta koin itse ainakin tämän selkeämmäksi. Dao-luokkien välillä on yhtenäisyyksiä, ja toisteisuutta.
