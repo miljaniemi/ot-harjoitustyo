@@ -20,10 +20,16 @@ Sovelluslogiikka sisältää kaksi luokkaa **Calendar** ja **Course**. Course lu
 Joita kutsutaan tekstikäyttöliittymässä.
 
 Alla vielä suhteet luokka-/pakkauskaaviona
-![Sekvenssikaavio](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/kuvat./nytoleoikein.png?raw=true)
+![Sekvenssikaavio](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/kuvat./uusiPakkausKaavio.png?raw=true)
 
 
 ## Sekvenssikaaviot
+
+**Sissänkirjautuminen ylläpitäjäksi**
+
+
+
+**Uuden kurssin luonti**
 
 Kun on tekstikäyttöliittymässä valittu, että käytetään ylläpitäjän oikeuksia ja ohjeet on kerrottu. Kirjoitetaan komennoksi yksi ja lisätään kurssi
 
