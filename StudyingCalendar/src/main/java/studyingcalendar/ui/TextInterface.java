@@ -266,6 +266,8 @@ public class TextInterface {
                     if (c.getName().equals(name) && c.getPeriod() == per) {
                         calendar.deleteCourse(c);
                         dao.delete(c);
+                        System.out.println("Course is deleted");
+                        break;
                     }
                 }
             }
