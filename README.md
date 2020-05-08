@@ -7,16 +7,21 @@ Opintokalenteri on ohjelma, joka on suunniteltu lähinnä omaan käyttöön. Sie
 
 [Ajankäyttö](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/TyöAikakirjanpito.md)
 
-[Määrittelydokumentti](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Vaativuusmaarittely.md)
-
 [Arkkitehtuuri](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Arkkitehtuuri.md)
 
 [Käyttöohje](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Kayttoohje.md)
 
+[Määrittelydokumentti](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Vaativuusmaarittely.md)
+
+[Testausdokumentti](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/Testausdokumentti.md)
+
 ## Releaset
 
 [Viikko 5](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko5)
+
 [Viikko 6](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko6)
+
+[Viikko 7]()
 
 ## Komentorivitoiminnot
   
