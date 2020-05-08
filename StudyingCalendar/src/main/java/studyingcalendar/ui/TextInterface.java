@@ -88,25 +88,34 @@ public class TextInterface {
         }
     }
 
+    /**
+     * Metodi, joka tarkistaa että tehdäänkö uusi salasana vai kysytäänkö olemassa olevaa
+     * @throws Exception 
+     */
     public void areYouAHost() throws Exception {
         if (passwordDao.getPassword() == null) {
             createNewPassword();
+            youreHost();
         } else {
-            
+            askForPassword();
         }
     }
-    
+
+    /**
+     * Metodi, jonka avulla luodaan ylläpitäjälle uusi salasana
+     * @throws Exception 
+     */
     public void createNewPassword() throws Exception {
         System.out.println("Welcome! Please write your new password. From now on, you need to login using it, so try to remember it :)");
         String password = reader.nextLine();
         passwordDao.save(password);
-        if (passwordDao.getPassword().matches(password)) {
-            System.out.println("Password is saved!");
-        } else {
-            System.out.println("Something went wrong, your password was not saved");
-        }
+
     }
-    
+
+    /**
+     * Metodi, joka kysyy aiemmin annettua salasanaa ylläpitäjältä, jotta tämä voi kirjautua sisään
+     * @throws Exception 
+     */
     public void askForPassword() throws Exception {
         System.out.println("Please type in your password:");
         String password = reader.nextLine();
@@ -117,7 +126,7 @@ public class TextInterface {
             askForPassword();
         }
     }
-    
+
     /**
      * Metodi tulostaa ylläpitäjän komentojen ohjeet
      */
@@ -311,7 +320,8 @@ public class TextInterface {
 
     /**
      * Oppilaan metodi, joka palauttaa kevään perioidien kurssit
-     * @throws Exception 
+     *
+     * @throws Exception
      */
     private void showSpring() throws Exception {
         System.out.println("ﾟ✧ Spring periods ✧ﾟ\n\nThird period (" + creditsInPeriod(3) + " credits)");
@@ -326,8 +336,10 @@ public class TextInterface {
     }
 
     /**
-     * Oppilaan metodi, joka palauttaa kaikki 4 periodia ja niiden sisältämät kurssit
-     * @throws Exception 
+     * Oppilaan metodi, joka palauttaa kaikki 4 periodia ja niiden sisältämät
+     * kurssit
+     *
+     * @throws Exception
      */
     private void showAll() throws Exception {
         System.out.println("First period (" + creditsInPeriod(1) + " credits)");
@@ -348,14 +360,15 @@ public class TextInterface {
         }
         System.out.println("");
     }
-    
+
     /**
-     * Metodi, joka tarkistaa onko samaa kurssia aiemmin luotu, jottai ole samaa kurssia useaan kertaan
+     * Metodi, joka tarkistaa onko samaa kurssia aiemmin luotu, jottai ole samaa
+     * kurssia useaan kertaan
+     *
      * @param course kurssi, jota verrataan muihin
      * @return kurssi jo olemassa (true) tai sitä ei ole (false)
-     * @throws Exception 
+     * @throws Exception
      */
-    
     private boolean courseAlreadyExist(Course course) throws Exception {
         String name = course.getName();
         int period = course.getPeriod();
@@ -369,6 +382,7 @@ public class TextInterface {
 
     /**
      * Metodi, joka laskee opintopistemäärän kyseisessä periodissa
+     *
      * @param period periodi, jonka opintopistemäärää kysytään
      * @return opintopistemäärän tietyssä periodissa
      */

@@ -1,2 +1,3 @@
-Aidinkieli;1;3;false
-Kandi;4;6;false
+Aidinkieli;1;3
+Kandi;4;6
+Laskennan mallit;1;5
