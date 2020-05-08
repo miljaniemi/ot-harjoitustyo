@@ -40,7 +40,7 @@ public class FilePasswordDao implements PasswordDao {
     @Override
     public String save(String password) throws Exception {
         try (FileWriter writer = new FileWriter(new File(file))) {
-                writer.write(password + ";" + "\n");
+            writer.write(password + ";" + "\n");
         }
         this.password = password;
         return password;
