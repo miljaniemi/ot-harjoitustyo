@@ -7,6 +7,7 @@ Lataa jar-tiedosto SCalendar.jar
 Ohjelma olettaa, että sen käynnistyshakemistossa (itse käytin *target* kansiota) olisi teidosto *config.properties* , jonne tulee kurssien pysyväistallennus. Tiedoston muoto on seuraava
 
 > courseFile=courses.txt
+> passwordFile=password.txt
 
 # Ohjelman käynnistys
 
@@ -18,7 +19,7 @@ Tämä avaa tekstikäyttöliittymän
 
 # Käyttäjän valinta
 
-Tässä vaiheessa saa valita, haluaako käyttää sovellusta opiskelijana vai ylläpitäjänä. Kummankaan kirjautumiseen ei tarvitse salasanaa. Opiskelija voi katsoa kalenteristaan kursseja joko periodi-, lukukausi- tai vuosinäkymä kerrallaan. Ylläpitäjä voi joko lisätä tai poistaa kursseja.
+Tässä vaiheessa saa valita, haluaako käyttää sovellusta opiskelijana vai ylläpitäjänä. Ylläpitäjän näkymään tarvitsee salasanan. Ensimmäisellä kerralla pääsee määrittämään salasanana, muuten käyttöliittymä kysyy. aiemmin määriteltyä salasanaa sisäänpääsyyn. Opiskelija voi katsoa kalenteristaan kursseja joko periodi-, lukukausi- tai vuosinäkymä kerrallaan. Ylläpitäjä voi joko lisätä tai poistaa kursseja.
 
 # Uuden kurssin luonti
 
