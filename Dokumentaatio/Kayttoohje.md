@@ -32,3 +32,7 @@ Ylläpitäjä voi myös poistaa kursseja. Tässä haasteena on muistaa täysin m
 ## Tietyn kurssin katsominen
 
 Tämä on toiminnallisuus opiskelijalle. Käyttöliittymä kysyy käyttäjältä periodia, joka halutaan katsoa. Jos se ei ole Integer-muodossa, varoittaa käyttöliittymä tästä. Numeron saadessaan se näyttää kyseisen periodin, jos numero oli joko 1,2,3 tai 4. Jos ei, se herjaa tästä.
+
+## Lukukauden tai koko vuoden katsominen
+
+Opiskelija voi katsoa periodeja myös valitsemalla tutkintaan syys- tai kevätlukukauden tai suoraan koko lukuvuoden. 
