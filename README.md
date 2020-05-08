@@ -42,9 +42,9 @@ Virheilmoitukset löytyvät checkstyle.html:stä, joka löytyy reitillä *Studyi
 
 JavaDocin saa komentorivillä
 
-> JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/ mvn clean javadoc:javadoc
+>  mvn javadoc:javadoc
 
-*HUOM* koodi mvn javadoc:javadoc ei siis toimi. Yllä oleva komentorivi saatu Telegramista. Löytyy reitillä *StudyingCalendar/target/site/apidocs/allclasses.html* jonka saa auki kansiossa apidocs komentorivillä
+*HUOM* jos koodi mvn javadoc:javadoc ei toimi, kokeile komentoriviä *JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/ mvn clean javadoc:javadoc*. Edellä oleva komentorivi saatu Telegramista. Löytyy reitillä *StudyingCalendar/target/site/apidocs/allclasses.html* jonka saa auki kansiossa apidocs komentorivillä
 
 > browse allclasses.html
 
