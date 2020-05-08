@@ -14,9 +14,9 @@ Pysyväistallennuksen testausta varten luotiin tilapäiset tekstitiedostot hyöd
 
 ### Testauskattavuus
 
-Käyttöliittymäkerrosta ja main-luokkaa lukuunottamatta testauksen rivikattavuus on 89% ja haaraumakattavuus 100%
+Käyttöliittymäkerrosta ja main-luokkaa lukuunottamatta testauksen rivikattavuus on 92% ja haaraumakattavuus 100%
 
-![testikattavuus](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/kuvat./Screenshot%20at%202020-05-08%2016-32-32.png?raw=true)
+![testikattavuus](https://github.com/miljaniemi/ot-harjoitustyo/blob/master/Dokumentaatio/kuvat./Screenshot%20at%202020-05-08%2017-02-45.png?raw=true)
 
 Testaamatta jäivät molempien dao luokkien virheen kaappaukset, sekä luokassa FilePasswordDao metodin getPassword(), kohta jossa palautetaan null.
 
