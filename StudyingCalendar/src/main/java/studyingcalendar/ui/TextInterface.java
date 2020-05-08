@@ -190,7 +190,7 @@ public class TextInterface {
                 if (credit < 1 || credit > 25) {
                     System.out.println("Not realistic amount. Try between 1-25");
                 } else {
-                    Course course = new Course(name, period, credit, false);
+                    Course course = new Course(name, period, credit);
                     if (courseAlreadyExist(course) == true) {
                         System.out.println("This course already exist!");
                     } else {
@@ -245,6 +245,7 @@ public class TextInterface {
             if (p < 1 || p > 4) {
                 System.out.println("There's only periods 1,2,3 and 4");
             } else {
+                System.out.println("(" + creditsInPeriod(p) + " credits in period " + p + " )");
                 for (Course course : calendar.getList(p)) {
                     System.out.println(course.getName() + ", " + course.getCredit() + " credits");
                 }
@@ -262,12 +263,12 @@ public class TextInterface {
     private void showAutumn() throws Exception {
         System.out.println("ﾟ✧ Autumn periods ✧ﾟ");
         System.out.println("");
-        System.out.println("First period:");
+        System.out.println("First period (" + creditsInPeriod(1) + " credits)");
         for (Course course : calendar.getList(1)) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
         System.out.println("");
-        System.out.println("Second period:");
+        System.out.println("Second period (" + creditsInPeriod(2) + " credits)");
         for (Course course : calendar.getList(2)) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
@@ -279,11 +280,11 @@ public class TextInterface {
      * @throws Exception 
      */
     private void showSpring() throws Exception {
-        System.out.println("ﾟ✧ Spring periods ✧ﾟ\n\nThird period:");
+        System.out.println("ﾟ✧ Spring periods ✧ﾟ\n\nThird period (" + creditsInPeriod(3) + " credits)");
         for (Course course : calendar.getList(3)) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
-        System.out.println("\nFourth period:");
+        System.out.println("\nFourth period (" + creditsInPeriod(4) + " credits)");
         for (Course course : calendar.getList(4)) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
@@ -295,19 +296,19 @@ public class TextInterface {
      * @throws Exception 
      */
     private void showAll() throws Exception {
-        System.out.println("First period:");
+        System.out.println("First period (" + creditsInPeriod(1) + " credits)");
         for (Course course : calendar.getList(1)) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
-        System.out.println("\nSecond period:");
+        System.out.println("\nSecond period (" + creditsInPeriod(2) + " credits)");
         for (Course course : calendar.getList(2)) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
-        System.out.println("\nThird period:");
+        System.out.println("\nThird period (" + creditsInPeriod(3) + " credits)");
         for (Course course : calendar.getList(3)) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
-        System.out.println("\nFourth period:");
+        System.out.println("\nFourth period (" + creditsInPeriod(4) + " credits)");
         for (Course course : calendar.getList(4)) {
             System.out.println(course.getName() + ", " + course.getCredit() + " credits");
         }
@@ -332,4 +333,16 @@ public class TextInterface {
         return false;
     }
 
+    /**
+     * Metodi, joka laskee opintopistemäärän kyseisessä periodissa
+     * @param period periodi, jonka opintopistemäärää kysytään
+     * @return opintopistemäärän tietyssä periodissa
+     */
+    private int creditsInPeriod(int period) {
+        int credits = 0;
+        for (Course course : calendar.getList(period)) {
+            credits += course.getCredit();
+        }
+        return credits;
+    }
 }

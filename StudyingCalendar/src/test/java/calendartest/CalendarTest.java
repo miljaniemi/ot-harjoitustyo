@@ -27,7 +27,7 @@ public class CalendarTest {
 
     @Test
     public void addingCourseWorks() {
-        Course test = new Course("TestCourse", 2, 5, false);
+        Course test = new Course("TestCourse", 2, 5);
         calendar.addCourse(test);
         ArrayList<Course> second = calendar.getList(2);
         assertEquals(second.size(), 1);
@@ -35,9 +35,9 @@ public class CalendarTest {
 
     @Test
     public void addingMultipleAndToDifferentPeriodsWorks() {
-        Course test1 = new Course("TestCourse1", 3, 5, false);
-        Course test2 = new Course("TestCourse2", 3, 5, false);
-        Course test3 = new Course("TestCourse3", 4, 5, false);
+        Course test1 = new Course("TestCourse1", 3, 5);
+        Course test2 = new Course("TestCourse2", 3, 5);
+        Course test3 = new Course("TestCourse3", 4, 5);
         calendar.addCourse(test3);
         calendar.addCourse(test2);
         calendar.addCourse(test1);
@@ -49,10 +49,10 @@ public class CalendarTest {
 
     @Test
     public void deletingACourseWorks() {
-        Course one = new Course("TestCourse1", 1, 5, false);
-        Course two = new Course("TestCourse2", 2, 5, false);
-        Course three = new Course("TestCourse3", 3, 5, false);
-        Course four = new Course("TestCourse4", 4, 5, false);
+        Course one = new Course("TestCourse1", 1, 5);
+        Course two = new Course("TestCourse2", 2, 5);
+        Course three = new Course("TestCourse3", 3, 5);
+        Course four = new Course("TestCourse4", 4, 5);
         calendar.addCourse(one);
         calendar.addCourse(two);
         calendar.addCourse(three);

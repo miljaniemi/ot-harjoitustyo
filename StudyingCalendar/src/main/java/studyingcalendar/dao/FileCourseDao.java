@@ -30,8 +30,7 @@ public class FileCourseDao implements CourseDao {
                 String[] parts = reader.nextLine().split(";");
                 int period = Integer.parseInt(parts[1]);
                 int credit = Integer.parseInt(parts[2]);
-                boolean done = Boolean.parseBoolean(parts[3]);
-                Course course = new Course(parts[0], period, credit, done);
+                Course course = new Course(parts[0], period, credit);
                 courses.add(course);
             }
         } catch (Exception e) {
@@ -47,7 +46,7 @@ public class FileCourseDao implements CourseDao {
     private void save() throws Exception {
         try (FileWriter writer = new FileWriter(new File(file))) {
             for (Course course : courses) {
-                writer.write(course.getName() + ";" + course.getPeriod() + ";" + course.getCredit() + ";" + course.getDone() + "\n");
+                writer.write(course.getName() + ";" + course.getPeriod() + ";" + course.getCredit() + "\n");
             }
         }
     }

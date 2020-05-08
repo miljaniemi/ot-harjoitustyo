@@ -48,7 +48,7 @@ public class FileCourseDaoTest {
     
     @Test
     public void newCourseCanBeAdded() throws Exception {
-        Course testohte = new Course("Testi Ohjelmistotekniikka",4,5,false);
+        Course testohte = new Course("Testi Ohjelmistotekniikka",4,5);
         dao.create(testohte);
         List<Course> courses = dao.allCourses();
         assertEquals(2, courses.size());
@@ -60,7 +60,7 @@ public class FileCourseDaoTest {
     
     @Test
     public void courseCanBeDeleted() throws Exception {
-        Course testohte = new Course("Testi Ohjelmistotekniikka",4,5,false);
+        Course testohte = new Course("Testi Ohjelmistotekniikka",4,5);
         dao.create(testohte);
         dao.delete(testohte);
         List<Course> courses = dao.allCourses();
