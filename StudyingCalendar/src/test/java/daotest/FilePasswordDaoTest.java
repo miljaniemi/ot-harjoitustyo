@@ -29,21 +29,38 @@ public class FilePasswordDaoTest {
     public TemporaryFolder testFolder = new TemporaryFolder();
     
     File passwordFile;
+    File passwordFile2;
     PasswordDao dao;
+    PasswordDao dao2;
     
     @Before
     public void setUp() throws IOException, Exception {
         passwordFile = testFolder.newFile("testpassword.txt");
+        passwordFile2 = testFolder.newFile("test2password.txt");
 
+        try (FileWriter file = new FileWriter(passwordFile2.getAbsolutePath())) {
+            file.write("password;\n");
+        }
+        
         dao = new FilePasswordDao(passwordFile.getAbsolutePath());
+        dao2 = new FilePasswordDao(passwordFile2.getAbsolutePath());
     }
 
+    @Test
+    public void noPasswordReturnsNull() throws Exception {
+        assertEquals(null, dao.getPassword());
+    }
+    
     @Test
     public void AddingANewPasswordWorks() throws Exception {
         dao.save("password");
         assertEquals("password", dao.getPassword());
     }
     
+    @Test
+    public void PreAddedPasswordIsThere() throws Exception {
+        assertEquals("password", dao2.getPassword());
+    }
     
     @After
     public void tearDown() {
