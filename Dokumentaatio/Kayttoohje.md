@@ -1,6 +1,6 @@
 # Käyttöohje #
 
-Lataa jar-tiedosto SCalendar.jar
+Lataa jar-tiedosto [SCalendar.jar](https://github.com/miljaniemi/ot-harjoitustyo/releases/tag/viikko7)
 
 ## Konfigurointi
 
